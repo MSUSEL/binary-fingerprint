@@ -1,0 +1,93 @@
+/mnt/sda/vol1/800
+ 2276 : HTML document
+ 3756 : PE32 executable (GUI) Intel 80386
+   15 : ISO-8859 text
+  458 : PE32 executable (DLL) (GUI) Intel 80386
+   83 : ASCII text
+   83 : Zip archive data
+   52 : PE32 executable (console) Intel 80386
+  216 : PE32 executable (GUI) Intel 80386 (stripped to external PDB)
+    6 : PE32 executable (DLL) (native) Intel 80386
+    3 : zlib compressed data
+   40 : GIF image data 15457 x 29282
+   55 : MS-DOS executable PE32 executable (GUI) Intel 80386 (stripped to external PDB)
+  107 : data
+   50 : RAR archive data
+   65 : PE32 executable (GUI) Intel 80386 Mono/.Net assembly
+   13 : MS-DOS executable PE32 executable (GUI) Intel 80386 Mono/.Net assembly
+   41 : PE32 executable (native) Intel 80386
+    5 : PE32 executable (console) Intel 80386 Mono/.Net assembly
+   62 : MS-DOS executable PE32 executable (GUI) Intel 80386
+   46 : PDF document
+    2 : DOS batch file
+    3 : MS-DOS executable PE32 executable (DLL) (GUI) Intel 80386
+    3 : DOS/MBR boot sector
+   17 : Composite Document File V2 Document
+   16 : PE32 executable (DLL) (console) Intel 80386
+    4 : ISO Media
+    1 : Generic INItialization configuration [Settings]\\015
+   29 : JPEG image data
+    3 : Macromedia Flash data (compressed)
+    2 : PE32+ executable (DLL) (GUI) x86-64
+    8 : PE32 executable (console) Intel 80386 (stripped to external PDB)
+    1 : dBase III DBT
+    2 : ELF 32-bit MSB executable
+   10 : PE32 executable (DLL) (console) Intel 80386 Mono/.Net assembly
+    8 : DOS executable (COM)
+   13 : FGDC-STD-001-1998
+   15 : XML 1.0 document
+    3 : GIF image data 3425 x 15370
+   17 : MS-DOS executable
+   12 : gzip compressed data
+    2 : SMTP mail
+    3 : Microsoft Windows Autorun file
+    7 : UTF-8 Unicode text
+    4 : PNG image data
+    6 : PE32 executable (DLL) (GUI) Intel 80386 (stripped to external PDB)
+    1 : Generic INItialization configuration [Desktop]\\015
+    1 : Ruby script
+    2 : UTF-8 Unicode (with BOM) text
+    1 : bzip2 compressed data
+    2 : Generic INItialization configuration [base64 encoded file]\\015
+    1 : compiled Java class data
+    1 : Android binary XML
+    1 : Microsoft Cabinet archive data
+    2 : C source
+    1 : PHP script
+    2 : 7-zip archive data
+    1 : JSON data
+    1 : Rich Text Format data
+    2 : PE32 executable (GUI) Intel 80386 system file
+    1 : MS-DOS executable PE32 executable (DLL) (GUI) Intel 80386 (stripped to external PDB)
+    4 : GIF image data
+    3 : ELF 32-bit LSB executable
+    1 : Non-ISO extended-ASCII text
+    1 : PE32 executable (DLL) (console) Intel 80386 (stripped to external PDB)
+    1 : PC bitmap
+    2 : Dalvik dex file version 035
+    1 : PE32 executable (DLL) (GUI) Intel 80386 (stripped to external PDB) system file
+    2 : PE32 executable (DLL) Intel 80386
+    2 : COM executable for MS-DOS
+    3 : COM executable for DOS
+    2 : PE32+ executable (GUI) x86-64
+   16 : Java archive data (JAR)
+    1 : Windows Registry text (Win95 or above)
+    2 : PE32+ executable (console) x86-64
+    1 : exported SGML document
+    1 : Bourne-Again shell script
+    1 : ARC archive data
+    1 : MIME entity
+    1 : PE32 executable (DLL) (GUI) Intel 80386 Mono/.Net assembly
+    1 : PE32 executable Intel 80386
+    1 : Microsoft Word 2007+
+    1 : Lisp/Scheme program
+    1 : PE32+ executable (native) x86-64
+    1 : Mac OS X icon
+    2 : MS Windows shortcut
+    1 : Macromedia Flash data
+    1 : RFC 822 mail
+    1 : Windows metafile
+    1 : news
+    1 : Apple binary property list
+    1 : VAX-order 68K Blit (standalone) executable
+    1 : ELF 64-bit LSB shared object
