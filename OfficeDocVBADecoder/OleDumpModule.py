@@ -27,18 +27,38 @@ def oleOpenStreams (name, streams):
         arg1 = "-s" + i
         arg2 = "-v"
         oleProc = subprocess.Popen([cmd, ole, name, arg1, arg2], stdout = subprocess.PIPE)
-        output = str(oleProc.communicate()).split('\\n')
+        output = str(oleProc.communicate()).split('\\n')[:-1]
         output[0] = output[0][3:]
         allVBA += output
     return allVBA
 
-def vbaAnalysis (vbaArray):
+def functionalizeVBA (vbaArray):
     functions = {"null": []}
     inFunc = 0
 
-    for i in vbaArray:
-        if ("Function" in i or "Sub" in i):
-            print (i)
+    currBuffer = []
+    currName = ""
+    for line in vbaArray:
+        i = line.lower()
+        if ("end" in i and ("sub" in i or "function" in i)):
+            inFunc -= 1
+            if (inFunc == 0):
+                currBuffer.append(i)
+                functions[currName] = currBuffer
+                currBuffer = []
+                currName = ""
+        elif (("function" in i or "sub" in i) and inFunc == 0):
+            currName = i
+            inFunc += 1
+        else:
+            if (len(i.strip()) == 0):
+                continue
+            if (inFunc > 0):
+                currBuffer.append(i.strip())
+            else:
+                functions["null"].append(i.strip())
+
+    return functions
 
 
 def determineFileType (name):
@@ -63,7 +83,12 @@ def main ():
         print (streams)
         if (len(streams) > 0):
             vbas = oleOpenStreams (fileName, streams)
-            vbaAnalysis (vbas)
+            functions = functionalizeVBA (vbas)
+            for i in functions:
+                print (i)
+                for j in functions[i]:
+                    print (j)
+                print ()
 
 if __name__ == "__main__":
     main ()
