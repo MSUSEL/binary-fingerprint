@@ -1,0 +1,25 @@
+{ 
+    "oid":"60d51fb0d4a18f3a06938407",
+    "epoch":1624580016,
+    "timestamp":"2021-06-24T18:13:36-0600",
+    "headBytes":"4d5a90000300000004000000ffff0000b8000000000000004000000000000000",
+    "tailBytes":"0000000000000000000000000000000000000000000000000000000000000000",
+    "crc32":"59137eac",
+    "adler32":"7093653c",
+    "md5":"00074acc70d5f8d64cfe2441acb63054",
+    "ripemd160":"38fee941f3e7a34e2417f237b9eeea8352eb749b",
+    "whirlpool":"b5203d0d50529ef0ff6ae020a801bbe6069d2203314639f5c349ff91bc3a33f6fd5e2a69b5832cfe2ab96f6fb7827d15616ca09ecace974b09a8b483b87fbaa9",
+    "sha256":"4879092582a9c1156c0d22b451d782ad954d729b1d2d0a2e56751762a751aa7e",
+    "size":"117760",
+    "ssdeep":"3072:frPo/Jg8g0svRH7gm1xZ5S3RvTBviiOukGp6Q5A4vaC:frwa5vn1fCRspPs6Q+4C",
+    "fileType":"PE32 executable (GUI) Intel 80386, for MS Windows",
+    "mimeType":"application/x-dosexec; charset=binary",
+    "fileExtension":"exe",
+    "trid":null,
+    "detections":[],
+    "exif": {"File:FileType":"Win32 EXE","File:FileTypeExtension":"exe","File:MIMEType":"application/octet-stream","EXE:MachineType":"Intel 386 or later, and compatibles","EXE:TimeStamp":"2006:12:02 15:10:22+09:00","EXE:PEType":"PE32","EXE:LinkerVersion":9.0,"EXE:CodeSize":52736,"EXE:InitializedDataSize":176128,"EXE:UninitializedDataSize":0,"EXE:EntryPoint":"0xdd55","EXE:OSVersion":5.0,"EXE:ImageVersion":0.0,"EXE:SubsystemVersion":5.0,"EXE:Subsystem":"Windows GUI","EXE:FileVersionNumber":"1.0.0.1","EXE:ProductVersionNumber":"1.0.0.1","EXE:FileFlagsMask":"0x001f","EXE:FileFlags":"Private build","EXE:FileOS":"Win32","EXE:ObjectFileType":"Executable application","EXE:FileSubtype":0,"EXE:LanguageCode":"English (U.S.)","EXE:CharacterSet":"Unicode","EXE:FileDescription":"Desktop Window Manager","EXE:FileVersion":"1, 0, 0, 2","EXE:LegalCopyright":"Copyright (C) 2010","EXE:PrivateBuild":1140,"EXE:ProductVersion":"1, 0, 0, 2"},
+    "strings":[],
+    "vt":"https://www.virustotal.com/gui/file/00074acc70d5f8d64cfe2441acb63054"
+}
+
+
