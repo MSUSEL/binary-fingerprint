@@ -61,6 +61,8 @@ Miscellaneous:
 * Compile Time Stamp
 * Author
 * File Name
+* File Size
+* Hash (md5, sha256, ssdeep, etc.)
 * Header names (nonsense or normal)
 * ASLR, DEP, etc.
 
