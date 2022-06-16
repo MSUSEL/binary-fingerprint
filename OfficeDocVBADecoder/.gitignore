@@ -3,3 +3,4 @@ oledump/
 *.xls
 *.bin
 __pycache__/
+reg.py

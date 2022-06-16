@@ -74,6 +74,12 @@ def CleanFunctions (funcs):
         if i in walked:
             usedFuncs[i] = funcs[i]
 
+    for funcNames in usedFuncs:
+        code = usedFuncs[funcNames]
+        for line in code:
+            splitLine = [x for x in re.split(r'\s+(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)', line) if x != '']
+            print (splitLine)
+
     return usedFuncs
 
 

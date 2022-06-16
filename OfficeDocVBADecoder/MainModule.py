@@ -25,16 +25,25 @@ def PrintFunctions (funcs):
         indent = 1
         for j in funcs[i]:
             splitLine = [x for x in re.split (r'[\(\),\s]', j) if x != '']
+
             if splitLine[0] in unindents:
                 indent -= 1
-            print (" "*indent*4 + j)
+
+            if splitLine[0] == "#else":
+                print (" "*(indent-1)*4 + j)
+            else:
+                print (" "*indent*4 + j)
+
             if splitLine[0] in indents:
                 indent += 1
         print ()
 
 def Main ():
-    fileName = input("Enter OfficeDoc File Name: ")
+    # fileName = input("Enter OfficeDoc File Name: ")
+    fileName = "/home/ryan/MalFiles/Invoice_yahoo.bin"
+
     fileExists = exists(fileName)
+
     if not fileExists:
         print ("Unable to find file, exiting...")
         sys.exit (1)
@@ -44,7 +53,7 @@ def Main ():
     print ("\nFile Type: " + fileType + "\n")
 
     # Attempt OLE Dump
-    print ("Attempting OLE Dump...")
+    print ("Attempting OLE Dump...\n")
 
     streams = Ole.OleFindStreams (fileName)
     if streams == "Error: OleDumpModule.py is not a valid OLE file.":
