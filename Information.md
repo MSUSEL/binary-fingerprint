@@ -40,19 +40,19 @@ Malware data science attack detection and attribution([link](https://msu-primo.h
 &emsp; ⤷ Lots of good information - chapter 6-8 especially  
 
 ## Other Good Links
-Malware Machine Learning: 
+**Malware Machine Learning:**  
 https://www.sciencedirect.com/science/article/pii/S2214212621000648#b20  
 &emsp; ⤷ Has a list of features to detect malware  
 &emsp; ⤷ Has some challenges to detection  
 
-Malware Image Classification: 
+**Malware Image Classification:**  
 https://dl.acm.org/doi/pdf/10.1145/2016904.2016908  
 &emsp; ⤷ Good overview on classifying malware based on images  
 
 https://arxiv.org/pdf/1903.11551.pdf  
 &emsp; ⤷ Another good overview of classifying malware based on images  
 
-Control Flow Graphs:  
+**Control Flow Graphs:**  
 https://www.sciencedirect.com/topics/computer-science/control-flow-graph  
 &emsp; ⤷ Overview of flow graphs  
 
@@ -61,6 +61,8 @@ Miscellaneous:
 * Compile Time Stamp
 * Author
 * File Name
+* File Size
+* Hash (md5, sha256, ssdeep, etc.)
 * Header names (nonsense or normal)
 * ASLR, DEP, etc.
 
