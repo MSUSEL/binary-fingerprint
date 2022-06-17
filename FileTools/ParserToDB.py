@@ -41,10 +41,10 @@ def ProcLine (data):
         jsonObj["headBytes"],
         jsonObj["tailBytes"],
         int(jsonObj["size"]),
-        jsonObj["fileType"],
-        jsonObj["mimeType"],
+        jsonObj["fileType"] if jsonObj["fileType"] is not None else "",
+        jsonObj["mimeType"] if jsonObj["mimeType"] is not None else "",
         jsonObj["fileExtension"] if jsonObj["fileExtension"] is not None else "",
-        json.dumps(jsonObj["exif"]),
+        json.dumps(jsonObj["exif"]) if jsonObj["exif"] != [] else '{}',
         jsonObj["vt"]
     )
     InsertDB(saveData)
