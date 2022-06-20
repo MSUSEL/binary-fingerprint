@@ -47,7 +47,16 @@ def ProcLine (data):
         json.dumps(jsonObj["exif"]) if jsonObj["exif"] != [] else '{}',
         jsonObj["vt"]
     )
-    InsertDB(saveData)
+    if QueryDB(jsonObj["_id"]["$oid"]):
+        print ("Able to add skipped entry")
+        InsertDB(saveData)
+
+def QueryDB (_id):
+    sql = f"SELECT COUNT(*) from {tableName} where _id='{_id}';"
+    cursorloc = mydb.cursor()
+    cursorloc.execute(sql)
+    row = cursorloc.fetchone()
+    return row == (0,)
 
 def InsertDB (data):
     try:
