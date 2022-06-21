@@ -45,13 +45,13 @@ def QueryDuplicates (count):
         for _id in nonUniqueID:
             remove = f"DELETE FROM {tableName} WHERE _id='{_id}';"
             deleted += 1
-            # cursorloc.execute(remove)
-            # mydb.commit()
+            cursorloc.execute(remove)
+            mydb.commit()
 
     return deleted
 
 def Main ():
-    print(f"{QueryDuplicates(1000000)} Duplicate Records Deleted")
+    print(f"{QueryDuplicates(0)} Duplicate Records Deleted")
 
 if __name__ == "__main__":
     Main ()
