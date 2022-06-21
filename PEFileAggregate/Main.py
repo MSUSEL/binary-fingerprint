@@ -1,14 +1,21 @@
+import math
 import hashlib
 import subprocess
 import json
+import imagehash
 import pefile
 import magic
 import ssdeep
+import numpy as np
 import InfoDicts as dic
+
+from PIL import Image as im
 
 FLOSS_PATH = "/home/ryan/Downloads/MalwareTools/Floss/floss"
 MANALYZER_PATH = "/home/ryan/Downloads/MalwareTools/Manalyze/bin/manalyze"
 FILE = "/home/ryan/MalFiles/PEFiles/ShinoLocker.bin"
+SAVE_PATH = "./images/"
+WIDTH_TABLE=[(10,32), (30,64), (60,128), (100,256), (200,384), (500,512), (1000,768), (1001,1024)]
 
 class MetaDataObject:
     '''Data object that houses all meta data pulled from the PE file'''
@@ -30,6 +37,7 @@ class MetaDataObject:
         self.bits = 32 if hex(pe.OPTIONAL_HEADER.Magic) == '0x10b' else 64
 
         self.manalyzer = ManalyzerData(MANALYZER_PATH, file)
+        self.images = ImageData(file)
         # self.floss = FlossData(FLOSS_PATH, file)
 
     def printFileInfo (self):
@@ -41,7 +49,8 @@ class MetaDataObject:
 
         f"   MD5:       {self.md5}\n"
         f"   SHA-256:   {self.sha256}\n"
-        f"   SSDEEP:    {self.ssdeep}\n")
+        f"   SSDEEP:    {self.ssdeep}\n"
+        f"   IMAGE:     {self.images.returnHash('full')}\n")
 
     def printPEInfo (self):
         print(f"{'PE Information':~^100}\n"
@@ -55,6 +64,7 @@ class MetaDataObject:
         for section in self.sections:
             x = section.Name.decode().rstrip(chr(0))
             print(f"   {x:<10}{dic.dSections.get(x, 'Unknown')}\n"
+            f"        Image Hash - {self.images.returnHash(x)}\n"
             f"        Virtual Size - {section.Misc_VirtualSize}\n"
             f"        Rawdata Size - {section.SizeOfRawData}\n"
             )
@@ -93,6 +103,61 @@ class FlossData:
     def stackStrings (self):
         return self.stack
 
+class ImageData:
+    '''Data object that houses information about images'''
+
+    def __init__ (self, file, save=False):
+        pe = pefile.PE(file)
+        self.file = file
+        self.pe = pe
+        self.hashes = self.partImage(save)
+        self.hashes.update(self.fullImage(save))
+
+    def returnHash (self, name):
+        return self.hashes[name]
+
+    def fullImage (self, save):
+        size = len(self.pe.write())/1024
+        width = 1
+        for x in WIDTH_TABLE:
+            if x[0] < size:
+                width = x[1]
+
+        array = []
+        with open(self.file, "rb") as f:
+            while byte := f.read(width):
+                array.append(list(byte))
+
+        np_array = np.array(array)
+        data = im.fromarray((np_array * 255).astype(np.uint8))
+        if save:
+            data.save("pic.png")
+
+        return {"full":imagehash.average_hash(data)}
+
+    def partImage (self, save):
+        hashes = {}
+        for i in self.pe.sections:
+            name = i.Name.decode().rstrip(chr(0))
+            bincode = self.pe.get_data(i.PointerToRawData, i.SizeOfRawData)
+
+            if len(bincode) == 0:
+                hashes[name] = 0
+                continue
+
+            width = math.ceil(math.sqrt(len(bincode)))
+            bincode += b"\x00"*(width**2 - len(bincode))
+
+            array = [[bincode[x] for x in range(y*width, (y+1)*width)] for y in range(width)]
+            np_array = np.array(array)
+            data = im.fromarray((np_array * 255).astype(np.uint8))
+
+            if save:
+                data.save(f"{SAVE_PATH}{name}.png")
+
+            hashes[name] = imagehash.average_hash(data)
+        return hashes
+
 def main ():
     dataObj = MetaDataObject (FILE)
 
@@ -116,3 +181,4 @@ if __name__ == "__main__":
     # dictInfo["imports"].append(entry.dll.decode().strip())
     # for imp in entry.imports:
         # dictInfo["apis"].append(imp.name.decode().strip())
+
