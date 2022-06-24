@@ -1,0 +1,17 @@
++------------------+--------+
+| Type             | Amount |
++------------------+--------+
+| trojan           |   1751 |
+| virus            |     63 |
+| adware           |     34 |
+| worm             |     24 |
+| downloader       |      8 |
+| hacktool         |      6 |
+|                  |      4 |
+| fakeav           |      4 |
+| dropper          |      4 |
+| banker           |      1 |
+| dialer/cyberbill |      1 |
++------------------+--------+
+
+Total: 1900
