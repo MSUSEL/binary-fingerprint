@@ -9,7 +9,7 @@ mydb = mysql.connector.connect (
     database="MalwareData"
 )
 tableName = "sample_pe"
-sqlStatement = f"SELECT _id, md5 FROM {tableName} limit 269,31;"
+sqlStatement = f"SELECT _id, md5 FROM {tableName} limit 1900, 100;"
 cursorloc = mydb.cursor()
 cursorloc.execute(sqlStatement)
 
