@@ -1,22 +1,24 @@
+Query: select substring_index(classif, '.', 1) as Type, count(substring_index(classif, '.', 1)) as Amount from sample_pe group by substring_index(classif, '.', 1);
+
 +------------------+--------+
 | Type             | Amount |
 +------------------+--------+
-| trojan           |   1751 |
-| virus            |     63 |
-| adware           |     34 |
-| worm             |     24 |
-| downloader       |      8 |
-| hacktool         |      6 |
+| trojan           |   2709 |
+| virus            |     74 |
+| worm             |     34 |
+| adware           |     51 |
+| downloader       |     12 |
 |                  |      4 |
 | fakeav           |      4 |
+| hacktool         |      6 |
 | dropper          |      4 |
 | banker           |      1 |
 | dialer/cyberbill |      1 |
 +------------------+--------+
 
 +------------------+--------+
-| Packed           |   1278 |
-| Unpacked         |    722 |
+| Packed           |    896 |
+| Unpacked         |   2004 |
 +------------------+--------+
 
-Total: 1900
+Total: 2900
