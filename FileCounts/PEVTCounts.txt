@@ -3,22 +3,23 @@ Query: select substring_index(classif, '.', 1) as Type, count(substring_index(cl
 +------------------+--------+
 | Type             | Amount |
 +------------------+--------+
-| trojan           |   2709 |
-| virus            |     74 |
-| worm             |     34 |
-| adware           |     51 |
+| trojan           |   3680 |
+| virus            |     77 |
+| worm             |     47 |
+| adware           |     62 |
 | downloader       |     12 |
 |                  |      4 |
 | fakeav           |      4 |
-| hacktool         |      6 |
+| hacktool         |      7 |
 | dropper          |      4 |
 | banker           |      1 |
 | dialer/cyberbill |      1 |
+| pua              |      1 |
 +------------------+--------+
 
 +------------------+--------+
-| Packed           |    896 |
-| Unpacked         |   2004 |
+| Packed           |    975 |
+| Not Packed       |   2925 |
 +------------------+--------+
 
-Total: 2900
+Total: 3900
