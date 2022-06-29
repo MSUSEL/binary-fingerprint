@@ -5,7 +5,7 @@ import numpy as np
 width_table=[(10,99),(30,189),(60,399),(100,756),(200,1155),(500,1533),(1000,2373)]
 
 path = "/home/ryan/MalFiles/PEFiles/"
-name = "ShinoLocker.bin"
+name = "upxremcos"
 filepath = path + name
 
 filesize = int(round(os.stat(filepath).st_size/1024))

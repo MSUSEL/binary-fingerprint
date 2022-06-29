@@ -1,4 +1,5 @@
 import re
+import pefile
 
 FILE_NAME = "/home/ryan/MalFiles/PEFiles/ShinoLocker.bin"
 OUT_NAME = "Saved"
@@ -22,8 +23,8 @@ with open(FILE_NAME, "rb") as f:
         with open(f"{OUT_NAME}{count}.gif", "wb") as g:
             g.write(img)
         count += 1
-    for img in re.findall(ico, read_file):
-        with open(f"{OUT_NAME}{count}.ico", "wb") as g:
-            g.write(img)
-        count += 1
+    # for img in re.findall(ico, read_file):
+        # with open(f"{OUT_NAME}{count}.ico", "wb") as g:
+            # g.write(img)
+        # count += 1
     print (f"Extracted {count} images")

@@ -4,8 +4,8 @@ import numpy as np
 
 width_table=[(10,94),(30,192),(60,384),(100,768),(200,1152),(500,1536),(1000,2304)]
 
-path = "/home/ryan/MalFiles/PEFiles/"
-name = "ShinoLocker.bin"
+path = "/home/ryan/MalFiles/Safe/"
+name = "npp.8.4.2.Installer.x64.exe"
 filepath = path + name
 
 filesize = int(round(os.stat(filepath).st_size/1024))
@@ -30,4 +30,7 @@ arr = np.zeros([h, w, 3], dtype=np.uint8)
 for i in range(h):
     for j in range(w):
         arr[i,j] = color_array[i][j]
-Image.fromarray(arr).save(name+"color.png")
+out = Image.fromarray(arr)
+out.save(name+"color.png")
+out2 = out.convert("L")
+out2.save(name+"bw.png")
