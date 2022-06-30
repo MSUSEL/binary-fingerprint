@@ -1,13 +1,13 @@
 import os
-import math
 # import imagehash
 import pefile
 import numpy as np
 from PIL import Image as im
 
-SAVE_PATH = "./imgs2/"
-WIDTH_TABLE=[(10,32), (30,64), (60,128), (100,256), (200,384), (500,512), (1000,768), (1001,1024)]
-FILE = "/home/ryan/MalFiles/PEFiles/upxremcos"
+SAVE_PATH = "./client/"
+# WIDTH_TABLE=[(10,32), (30,64), (60,128), (100,256), (200,384), (500,512), (1000,768), (1001,1024)]
+FILE = "/home/ryan/MalFiles/PEFiles/Client.bin"
+LOW_THRESHOLD = 3 * 512
 SAVE = True
 
 def fullImage (width):
@@ -31,6 +31,8 @@ def partImage (width):
             name = i.Name.decode().rstrip(chr(0))
             start = i.PointerToRawData
             size = i.SizeOfRawData
+            if size < LOW_THRESHOLD:
+                continue
 
             f.seek(start)
             bincode = f.read(size)
@@ -47,10 +49,11 @@ if __name__ == "__main__":
     os.makedirs(SAVE_PATH, exist_ok=True)
 
     size = os.path.getsize(FILE)
-    width = 1
-    for x in WIDTH_TABLE:
-        if x[0] < size/1024:
-            width = x[1]
+    width = 512
+    # width = 1
+    # for x in WIDTH_TABLE:
+        # if x[0] < size/1024:
+            # width = x[1]
 
     partImage(width)
     fullImage(width)
