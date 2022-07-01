@@ -136,14 +136,19 @@ if __name__ == "__main__":
     # If a single file was specified
     if args.file is not None:
         print ("Processing", args.file)
-        x = SectionPE(args.file, args.out, args.width, args.min)
+        SectionPE(args.file, args.out, args.width, args.min)
 
     elif args.dir is not None:
         try:
-            for file in os.listdir(args.dir):
-                if os.path.isfile(args.dir+'/'+file):
-                    print ("Processing", args.dir+'/'+file)
-                    x = SectionPE(args.dir+'/'+file, args.out, args.width, args.min)
+            directories = [args.dir]
+            while len(directories) > 0:
+                for file in os.listdir(directories[0]):
+                    if os.path.isfile(directories[0]+'/'+file):
+                        print ("Processing", directories[0]+'/'+file)
+                        SectionPE(directories[0]+'/'+file, args.out, args.width, args.min)
+                    else:
+                        directories.append(args.dir+'/'+file)
+                del directories[0]
         except Exception as e:
             print (e)
             sys.exit(1)
@@ -153,7 +158,7 @@ if __name__ == "__main__":
             with open(args.list, "r", encoding='utf-8') as f:
                 while item := f.readline():
                     print ("Processing", item.strip())
-                    x = SectionPE(item.strip(), args.out, args.width, args.min)
+                    SectionPE(item.strip(), args.out, args.width, args.min)
         except Exception as e:
             print(e)
             sys.exit(1)
