@@ -1,4 +1,4 @@
-Total Entries: 5900
+Total Entries: 6900
 
 SELECT 
     SUBSTRING_INDEX(classif, '.', 1) AS Type, 
@@ -10,19 +10,20 @@ ORDER BY Amount DESC;
 +------------------+--------+
 | Type             | Amount |
 +------------------+--------+
-| trojan           |   5578 |
-| worm             |    100 |
-| adware           |     99 |
-| virus            |     85 |
+| trojan           |   6535 |
+| adware           |    120 |
+| worm             |    111 |
+| virus            |     93 |
 | downloader       |     13 |
 | hacktool         |      7 |
 |                  |      4 |
 | fakeav           |      4 |
 | dropper          |      4 |
-| banker           |      2 |
+| banker           |      4 |
 | spyware          |      2 |
 | dialer/cyberbill |      1 |
 | pua              |      1 |
+| almanahe/rootkit |      1 |
 +------------------+--------+
 
 SELECT COUNT(*) FROM sample_pe WHERE not packers="" UNION
@@ -31,8 +32,8 @@ SELECT COUNT(*) FROM sample_pe WHERE packers="";
 +------------------+--------+
 | Type             | Amount |
 +------------------+--------+
-| Packed           |   1142 |
-| Not Packed       |   4758 |
+| Packed           |   1220 |
+| Not Packed       |   5680 |
 +------------------+--------+
 
 SELECT
@@ -53,68 +54,72 @@ ORDER BY Amount DESC;
 +-------------------+--------+
 | Family            | Amount |
 +-------------------+--------+
-| farfli            |   1431 |
-| rootkit           |    743 |
+| farfli            |   1701 |
+| rootkit           |   1003 |
 | bancos            |    642 |
-| koutodoor         |    205 |
-| swisyn            |    197 |
+| koutodoor         |    296 |
+| swisyn            |    238 |
 | buzus             |    187 |
-|                   |    169 |
-| onlinegames       |    128 |
-| cinmus            |    123 |
-| mofksys           |     98 |
-| rtkdl             |     75 |
-| picsys            |     68 |
-| obfuscated        |     56 |
-| graftor           |     50 |
-| startpage         |     46 |
-| dialer            |     46 |
+|                   |    179 |
+| cinmus            |    169 |
+| onlinegames       |    167 |
+| mofksys           |    139 |
+| rtkdl             |    102 |
+| picsys            |     76 |
+| dialer            |     70 |
+| obfuscated        |     66 |
+| graftor           |     55 |
+| startpage         |     47 |
 | kryptik           |     40 |
+| pcclient          |     40 |
 | femad             |     39 |
 | father            |     33 |
-| pcclient          |     29 |
+| lurka             |     29 |
 | kazy              |     27 |
+| msil              |     27 |
+| hmir              |     27 |
 | zbot              |     26 |
+| banbra            |     26 |
 | hupigon           |     25 |
+| cycbot            |     24 |
 | femac             |     24 |
-| cycbot            |     23 |
-| msil              |     23 |
-| hmir              |     23 |
+| hacdef            |     24 |
 | archsms           |     22 |
+| barys             |     22 |
+| tibs              |     22 |
 | krap              |     20 |
-| barys             |     20 |
-| hacdef            |     20 |
 | johnnie           |     19 |
-| tibs              |     19 |
-| lurka             |     19 |
-| banbra            |     18 |
 | vbkrypt           |     18 |
 | winwebsec         |     18 |
 | adload            |     17 |
 | ratboy            |     16 |
 | homac             |     16 |
+| fraudpack         |     16 |
 | zemac             |     15 |
 | navipromo         |     15 |
 | constructor       |     15 |
+| bifrose           |     14 |
+| pakes             |     14 |
 | notpa             |     14 |
 | autoit            |     14 |
+| tdss              |     14 |
+| goldun            |     14 |
+| banload           |     13 |
 | flystudio         |     12 |
 | lavi              |     12 |
-| banload           |     12 |
-| bifrose           |     12 |
-| pakes             |     12 |
 | razy              |     12 |
-| tdss              |     12 |
 | dlgj              |     12 |
+| haxdoor           |     12 |
+| vanti             |     12 |
 | zusy              |     11 |
 | momac             |     11 |
+| vobfus            |     11 |
 | symmi             |     11 |
-| vobfus            |     10 |
+| comet             |     11 |
 | meger             |     10 |
 | unruy             |     10 |
 | xmedia            |     10 |
-| fraudpack         |     10 |
-| goldun            |     10 |
+| saturn            |     10 |
 | qqpass            |      9 |
 | baidusearch       |      9 |
 | elzob             |      9 |
@@ -122,43 +127,43 @@ ORDER BY Amount DESC;
 | genome            |      9 |
 | scar              |      9 |
 | murofet           |      9 |
-| saturn            |      9 |
-| vanti             |      9 |
 | ursu              |      8 |
 | zlob              |      8 |
 | memscan           |      8 |
 | strictor          |      8 |
-| haxdoor           |      8 |
+| magania           |      8 |
 | nsanti            |      7 |
-| comet             |      7 |
+| zhelatin          |      7 |
 | fraudload         |      6 |
 | rbot              |      6 |
 | moothie           |      6 |
 | krypt             |      6 |
 | lampa             |      6 |
+| plingky           |      6 |
 | gosys             |      6 |
 | inuk              |      5 |
 | sdbot             |      5 |
+| poison            |      5 |
 | netins            |      5 |
 | nsis              |      5 |
-| plingky           |      5 |
 | dangerousobject   |      5 |
 | msilperseus       |      5 |
 | walrus            |      5 |
 | sirefef           |      5 |
 | gamevance         |      5 |
 | midgare           |      5 |
-| magania           |      5 |
+| huwx              |      5 |
+| ydpk              |      5 |
 | mikey             |      4 |
 | prorat            |      4 |
 | virtool           |      4 |
+| buzy              |      4 |
 | sasfis            |      4 |
 | webrebates        |      4 |
+| ressdt            |      4 |
 | ircbot            |      4 |
 | simda             |      4 |
-| zhelatin          |      4 |
-| huwx              |      4 |
-| ydpk              |      4 |
+| newweb            |      4 |
 | cnnic             |      4 |
 | deepscan          |      3 |
 | renos             |      3 |
@@ -166,8 +171,8 @@ ORDER BY Amount DESC;
 | casino            |      3 |
 | keylogger         |      3 |
 | filerepmetagen    |      3 |
-| poison            |      3 |
 | ldpinch           |      3 |
+| dldr              |      3 |
 | malwaref          |      3 |
 | llac              |      3 |
 | menti             |      3 |
@@ -175,21 +180,25 @@ ORDER BY Amount DESC;
 | bublik            |      3 |
 | rimecud           |      3 |
 | blackhole         |      3 |
-| buzy              |      3 |
 | killav            |      3 |
+| hotbar            |      3 |
 | palevo            |      3 |
 | jorik             |      3 |
 | spnr              |      3 |
 | sinowal           |      3 |
-| ressdt            |      3 |
 | molotov           |      3 |
 | skintrim          |      3 |
 | fosniw            |      3 |
 | doina             |      3 |
 | alicia            |      3 |
-| newweb            |      3 |
+| pcclient2         |      3 |
+| ansi              |      3 |
+| koobface          |      3 |
 | gator             |      3 |
+| ditex             |      3 |
+| pendix            |      3 |
 | nuwar             |      3 |
+| systemsecurity    |      3 |
 | filerepmalware    |      2 |
 | bscope            |      2 |
 | shiz              |      2 |
@@ -205,7 +214,6 @@ ORDER BY Amount DESC;
 | zedmac            |      2 |
 | gen2              |      2 |
 | zegost            |      2 |
-| dldr              |      2 |
 | dnschanger        |      2 |
 | iroffer           |      2 |
 | emotetu           |      2 |
@@ -218,7 +226,6 @@ ORDER BY Amount DESC;
 | tedy              |      2 |
 | zwangi            |      2 |
 | cidox             |      2 |
-| hotbar            |      2 |
 | sefnit            |      2 |
 | dafl              |      2 |
 | black             |      2 |
@@ -251,16 +258,18 @@ ORDER BY Amount DESC;
 | sbdldg            |      2 |
 | manbat            |      2 |
 | pwstealer         |      2 |
-| pcclient2         |      2 |
-| ansi              |      2 |
 | bancodor          |      2 |
 | haxspy            |      2 |
-| koobface          |      2 |
+| hideproc          |      2 |
 | sexxxport         |      2 |
 | surila            |      2 |
 | peregar           |      2 |
-| systemsecurity    |      2 |
+| pascal            |      2 |
 | info              |      2 |
+| comsurveilsys     |      2 |
+| bdsearch          |      2 |
+| gyner             |      2 |
+| dloader           |      2 |
 | ig4rtkab          |      1 |
 | zygug             |      1 |
 | mespam            |      1 |
@@ -520,8 +529,6 @@ ORDER BY Amount DESC;
 | delfinject        |      1 |
 | dggj              |      1 |
 | joke              |      1 |
-| ditex             |      1 |
-| hideproc          |      1 |
 | nebuler           |      1 |
 | aghn              |      1 |
 | redosdru          |      1 |
@@ -535,8 +542,6 @@ ORDER BY Amount DESC;
 | delsys            |      1 |
 | slxwgoniy         |      1 |
 | aijf              |      1 |
-| pendix            |      1 |
-| pascal            |      1 |
 | sysworm           |      1 |
 | sd70g4foy         |      1 |
 | legemir           |      1 |
@@ -556,7 +561,6 @@ ORDER BY Amount DESC;
 | moonpie           |      1 |
 | qed897mi          |      1 |
 | rawlam            |      1 |
-| comsurveilsys     |      1 |
 | antivirusagentpro |      1 |
 | redol             |      1 |
 | deltree           |      1 |
@@ -567,11 +571,28 @@ ORDER BY Amount DESC;
 | ei0frfy9xzeie     |      1 |
 | lecna             |      1 |
 | dbit              |      1 |
-| bdsearch          |      1 |
 | keylog            |      1 |
 | bmoa              |      1 |
 | qvod              |      1 |
-| gyner             |      1 |
 | viruswizard       |      1 |
 | afki              |      1 |
+| pespin            |      1 |
+| nulprot           |      1 |
+| s5bty7ooy         |      1 |
+| almanahe          |      1 |
+| hackology         |      1 |
+| iosys             |      1 |
+| azdh              |      1 |
+| ahrn              |      1 |
+| sbwjiytay         |      1 |
+| cosne             |      1 |
+| vzcsys            |      1 |
+| t5wiiy            |      1 |
+| probably          |      1 |
+| bg8jzkb           |      1 |
+| aewj              |      1 |
+| jlyd              |      1 |
+| hider             |      1 |
+| genlot            |      1 |
+| potentially       |      1 |
 +-------------------+--------+
