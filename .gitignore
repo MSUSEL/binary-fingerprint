@@ -1,1 +1,5 @@
 VirusTotalAPI/
+__pycache__
+pecheck.py
+test.py
+*.png
