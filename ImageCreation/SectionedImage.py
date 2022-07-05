@@ -5,10 +5,13 @@
 This is a program to create black and white images from PE files
 """
 
+import time
 import sys
 import os
 import re
+import subprocess
 import argparse
+import json
 import pefile
 import numpy as np
 from PIL import Image as im
@@ -43,10 +46,21 @@ class SectionPE ():
         os.makedirs(self.out, exist_ok=True)
         os.makedirs(self.out + "icos/", exist_ok=True)
 
-        self.partImage()
+        info = {'name': name}
+        try:
+            pepack = subprocess.run(['pepack', self.file], capture_output=True, check=True)
+            info["packer"] = pepack.stdout.decode()[8:].strip()
+        except Exception:
+            info["packer"] = "NaN"
+
+        info.update(self.partImage())
         self.fullImage()
         # self.extractImages()
         self.extractIcos()
+
+        with open(f"{out}/details.txt", "a+", encoding='utf-8') as f:
+            f.write(json.dumps(info)+'\n')
+        print()
 
     def fullImage (self):
         array = []
@@ -61,6 +75,7 @@ class SectionPE ():
         data.save(f"{self.out}/full.png")
 
     def partImage (self):
+        saved = {}
         with open(self.file, "rb") as f:
             for i in self.pe.sections:
                 name = i.Name.decode().rstrip(chr(0))
@@ -77,7 +92,9 @@ class SectionPE ():
 
                 np_array = np.array(array)
                 data = im.fromarray((np_array * 255).astype(np.uint8))
-                data.save(f"{self.out}/({name}).png")
+                data.save(f"{self.out}/{name.replace('.','')}.png")
+                saved[name.replace('.','')] = size
+        return saved
 
     def extractImages (self):
         count = 0
@@ -128,40 +145,55 @@ if __name__ == "__main__":
             help='option to save metadata about the file')
     parser.add_argument('-w', '--width', dest='width', type=int, default=512,
             help='width of generated image')
-    parser.add_argument('-m', '--min_size', dest='min', type=int, default=3,
+    parser.add_argument('-mi', '--min_size', dest='min', type=int, default=3,
             help='minimum size of section in order to be saved')
+    parser.add_argument('-ma', '--max_count', dest='max', type=int, default=-1,
+            help='maximum number of files to process; default is all')
 
     args = parser.parse_args()
+
+    start = time.time()
 
     # If a single file was specified
     if args.file is not None:
         print ("Processing", args.file)
         SectionPE(args.file, args.out, args.width, args.min)
+        print (f"Processed 1 in {time.time() - start:.2} seconds")
 
     elif args.dir is not None:
+        count = 0
         try:
             directories = [args.dir]
             while len(directories) > 0:
                 for file in os.listdir(directories[0]):
+                    if args.max != -1 and args.max <= count:
+                        raise Exception ("Reached specified count")
                     if os.path.isfile(directories[0]+'/'+file):
                         print ("Processing", directories[0]+'/'+file)
                         SectionPE(directories[0]+'/'+file, args.out, args.width, args.min)
                     else:
                         directories.append(args.dir+'/'+file)
+                    count += 1
                 del directories[0]
         except Exception as e:
             print (e)
-            sys.exit(1)
+            # sys.exit(1)
+        print (f"Processed {count} in {time.time() - start:.2} seconds")
 
     elif args.list is not None:
+        count = 0
         try:
             with open(args.list, "r", encoding='utf-8') as f:
                 while item := f.readline():
+                    if args.max != -1 and args.max <= count:
+                        raise Exception ("Reached specified count")
                     print ("Processing", item.strip())
                     SectionPE(item.strip(), args.out, args.width, args.min)
+                    count += 1
         except Exception as e:
             print(e)
-            sys.exit(1)
+            # sys.exit(1)
+        print (f"Processed {count} in {time.time() - start:.2} seconds")
 
     else:
         parser.print_help()
