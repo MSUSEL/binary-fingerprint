@@ -6,12 +6,12 @@ This is a program to create black and white images from PE files
 """
 
 import time
-import sys
 import os
 import re
 import subprocess
 import argparse
 import json
+import imagehash
 import pefile
 import numpy as np
 from PIL import Image as im
@@ -54,13 +54,22 @@ class SectionPE ():
             info["packer"] = "NaN"
 
         info.update(self.partImage())
-        self.fullImage()
+        info.update(self.fullImage())
+        info.update(self.extractIcos())
         # self.extractImages()
-        self.extractIcos()
 
         with open(f"{out}/details.txt", "a+", encoding='utf-8') as f:
             f.write(json.dumps(info)+'\n')
-        print()
+
+        print("Done\n")
+
+    def gethashes(self, img):
+        x = [str(imagehash.average_hash(img)),
+             str(imagehash.crop_resistant_hash(img)),
+             str(imagehash.whash(img)),
+             str(imagehash.phash(img)),
+             str(imagehash.dhash(img))]
+        return x
 
     def fullImage (self):
         array = []
@@ -73,6 +82,7 @@ class SectionPE ():
         np_array = np.array(array)
         data = im.fromarray((np_array * 255).astype(np.uint8))
         data.save(f"{self.out}/full.png")
+        return {'full': [os.stat(self.file).st_size] + self.gethashes(data)}
 
     def partImage (self):
         saved = {}
@@ -93,7 +103,7 @@ class SectionPE ():
                 np_array = np.array(array)
                 data = im.fromarray((np_array * 255).astype(np.uint8))
                 data.save(f"{self.out}/{name.replace('.','')}.png")
-                saved[name.replace('.','')] = size
+                saved[name.replace('.','')] = [size] + self.gethashes(data)
         return saved
 
     def extractImages (self):
@@ -124,10 +134,20 @@ class SectionPE ():
 
         groups = extractor.get_group_icons()
 
+        largest = None
+        size = 0
         for group in groups:
             for i in range(len(group)):
                 img = extractor.export(group, i)
                 img.save(f"{self.out}/icos/b{i}.png")
+                x = os.stat(f"{self.out}/icos/b{i}.png").st_size
+                if x > size:
+                    size = x
+                    largest = img
+
+        if largest is not None:
+            return {"ico": [size] + self.gethashes(largest)}
+        return {"ico": []}
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Create black and white images from PE files')
@@ -151,7 +171,6 @@ if __name__ == "__main__":
             help='maximum number of files to process; default is all')
 
     args = parser.parse_args()
-
     start = time.time()
 
     # If a single file was specified
@@ -160,6 +179,7 @@ if __name__ == "__main__":
         SectionPE(args.file, args.out, args.width, args.min)
         print (f"Processed 1 in {time.time() - start:.2} seconds")
 
+    # If a directory was specified
     elif args.dir is not None:
         count = 0
         try:
@@ -180,6 +200,7 @@ if __name__ == "__main__":
             # sys.exit(1)
         print (f"Processed {count} in {time.time() - start:.2} seconds")
 
+    # if a file specifying a list of files is passed in
     elif args.list is not None:
         count = 0
         try:
@@ -193,7 +214,7 @@ if __name__ == "__main__":
         except Exception as e:
             print(e)
             # sys.exit(1)
-        print (f"Processed {count} in {time.time() - start:.2} seconds")
+        print (f"Processed {count} in {time.time()-start:.2f} seconds")
 
     else:
         parser.print_help()
