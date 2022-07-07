@@ -53,7 +53,7 @@ class SectionPE ():
         except Exception:
             info["packer"] = "NaN"
 
-        info.update(self.partImage())
+        info["sections"] = self.partImage()
         info.update(self.fullImage())
         info.update(self.extractIcos())
         # self.extractImages()
