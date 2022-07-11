@@ -1,0 +1,21 @@
+162 Small header length
+ 44 Invalid NT Headers
+ 35 Invalid e_lfanew
+ 27 Embedded null byte
+ 79 Invalid start byte
+  5 Invalid continuation byte
+ 75 Unknown file extension
+684 Files Not Found
+ 21 NonType cant save
+  1 Index out of range
+
+Total In: 6900
+Total Dones: 5766
+Total Recorded: 5769
+
+Icons: 1321
+No Icons: 4448
+
+Total no sections: 218
+
+Packed: 692
