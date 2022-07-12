@@ -65,7 +65,7 @@ class SectionPE ():
 
     def gethashes(self, img):
         x = [str(imagehash.average_hash(img)),
-             str(imagehash.crop_resistant_hash(img)),
+             # str(imagehash.crop_resistant_hash(img)),
              str(imagehash.whash(img)),
              str(imagehash.phash(img)),
              str(imagehash.dhash(img))]
@@ -203,17 +203,18 @@ if __name__ == "__main__":
     # if a file specifying a list of files is passed in
     elif args.list is not None:
         count = 0
-        try:
-            with open(args.list, "r", encoding='utf-8') as f:
-                while item := f.readline():
-                    if args.max != -1 and args.max <= count:
-                        raise Exception ("Reached specified count")
-                    print ("Processing", item.strip())
+        with open(args.list, "r", encoding='utf-8') as f:
+            while item := f.readline():
+                if args.max != -1 and args.max <= count:
+                    raise Exception ("Reached specified count")
+                print ("Processing", item.strip())
+                try:
                     SectionPE(item.strip(), args.out, args.width, args.min)
                     count += 1
-        except Exception as e:
-            print(e)
-            # sys.exit(1)
+                except Exception as e:
+                    print(e)
+                    # sys.exit(1)
+                print ()
         print (f"Processed {count} in {time.time()-start:.2f} seconds")
 
     else:
