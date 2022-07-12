@@ -1,4 +1,4 @@
-with open("a.txt", "r") as f:
+with open(input(), "r") as f:
     while item := f.readline():
 
         # 8 9 a or b
