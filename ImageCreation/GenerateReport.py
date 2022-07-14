@@ -6,6 +6,7 @@ def listErrors (file):
     success = 0
     errDic = {"File Not Found" : 0,
               "Header Length Issue" : 0,
+              "DOS Header Magic" : 0,
               "Unknown File Extension" : 0,
               "Invalid NT Header" : 0,
               "Invalid e_lfanew" : 0,
@@ -44,6 +45,8 @@ def listErrors (file):
                 errDic["Header Length Issue"] += 1
             elif "be fetched" in item:
                 errDic["Data cant be fetched"] += 1
+            elif "DOS Header magic not found" in item:
+                errDic["DOS Header Magic"] += 1
             elif item != '\n' and "Processed" not in item:
                 errDic["Others"] += 1
                 # print (item)
