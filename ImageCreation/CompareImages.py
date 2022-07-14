@@ -1,6 +1,7 @@
 import json
 import argparse
 import imagehash
+import numpy as np
 
 class FileObject ():
     def __init__ (self, jsonObj):
@@ -10,20 +11,6 @@ class FileObject ():
         self.full = jsonObj["full"]
         self.sections = jsonObj["sections"]
 
-    # def AverageHashes (self):
-        # return [self.sections[x][1] for x in self.sections]
-
-    # def CropResitantHashes (self):
-        # return [self.sections[x][2] for x in self.sections]
-
-    # def WaveletHashes (self):
-        # return [self.sections[x][3] for x in self.sections]
-
-    # def PerceptualHashes (self):
-        # return [self.sections[x][4] for x in self.sections]
-
-    # def DifferenceHashes (self):
-        # return [self.sections[x][5] for x in self.sections]
     def SectionNames (self):
         return self.sections.keys()
 
@@ -38,13 +25,10 @@ class FileObject ():
 
 def CompareLists (l1, l2):
     if not l1 or not l2:
-        return None
+        return []
 
     diffs = []
-    for i in range(5):
-        if i == 1:
-            continue
-
+    for i in range(4):
         x = imagehash.hex_to_hash(l1[i])
         y = imagehash.hex_to_hash(l2[i])
         diffs.append(x - y)
@@ -65,20 +49,38 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+
     if args.file is not None:
         objs = buildObjects(args.file)
+        icoArr = [[0 for x in range(len(objs)-1)] for y in range(len(objs)-1)]
         for i in range (len(objs)-1):
             for j in range(i+1, len(objs)-1):
                 print (f"Comparing {objs[i].name} & {objs[j].name}")
-                print (f"   Icons: {CompareLists (objs[i].IconHashes(), objs[j].IconHashes())}")
-                print (f"   Full: {CompareLists (objs[i].FullHashes(), objs[j].FullHashes())}")
-                print ("   Sections: ")
 
+                icos = np.array(CompareLists(objs[i].IconHashes(), objs[j].IconHashes()))
+                if len(icos) > 0 and np.average(icos) == 0:
+                    icoArr[i][j], icoArr[j][i] = 1, 1
+                print (f"   Icons: {icos}")
+
+                print (f"   Full: {CompareLists (objs[i].FullHashes(), objs[j].FullHashes())}\n")
+
+                matches = []
+                randoms = []
                 for x in objs[i].SectionNames():
                     for y in objs[j].SectionNames():
+                        res = CompareLists(objs[i].SectionHashes(x), objs[j].SectionHashes(y))
+
                         if x == y:
-                            res = CompareLists(objs[i].SectionHashes(x), objs[j].SectionHashes(y))
-                            print (f"        {x} & {y}: {res}")
+                            matches.append(f"        {x} & {y}: {res}")
+                        else:
+                            randoms.append(f"        {x} & {y}: {res}")
+
+                mostSections = max(len(objs[i].SectionNames()), len(objs[j].SectionNames()))
+                print (f"   Matched ({len(matches)}/{mostSections}):")
+                print('\n'.join(matches))
+                # print ("\n   Others:")
+                # print('\n'.join(randoms))
                 print ()
+
     else:
         parser.print_help()
