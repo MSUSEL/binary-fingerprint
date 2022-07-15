@@ -93,12 +93,18 @@ if __name__ == "__main__":
             help='file containing hashes and classif info')
     parser.add_argument("-t", '--threshold', dest='thresh', type=int, default=.5,
             help='comparison index')
-    parser.add_argument('-o', '--output', dest='out', type=str, default='clusters')
+    parser.add_argument('-o', '--output', dest='out', type=str, default='clusters',
+            help='output directory')
+    parser.add_argument("-l", '--list', dest='l', type=str,
+            help='pickle file from saved clustered list')
 
     args = parser.parse_args()
 
     start = time.time()
 
-    constructMatrix(args.dir, args.out, args.classif, args.thresh)
+    if args.l is not None:
+        labelClusters(args.dir, args.out, args.classif, args.l)
+    else:
+        constructMatrix(args.dir, args.out, args.classif, args.thresh)
 
     print (f"Finished in {time.time() - start} seconds")
