@@ -35,7 +35,7 @@ def constructMatrix (directory, out, hashfile, threshold):
             folderWithIcos.append(folder)
 
     print ("Running comparisons:")
-    # folderWithIcos = folderWithIcos[:50]
+    folderWithIcos = folderWithIcos[:50]
     while folder := folderWithIcos.pop(0):
         initIcos = os.listdir(f"{directory}/{folder}/icos")
         for cmpFld in folderWithIcos:
@@ -48,14 +48,17 @@ def constructMatrix (directory, out, hashfile, threshold):
             break
 
     print ("Creating Graph and clustering:")
+    os.makedirs (out)
     g = nx.Graph(dic)
+    nx.draw(g, with_labels=False)
+    with open(f"{out}/graph.pkl", 'wb') as f:
+        pickle.dump(g, f)
 
     clusterList = []
     for i in (g.subgraph(c) for c in nx.connected_components(g)):
         clusterList.append(list(i))
         # print (list(i))
 
-    os.makedirs (out)
     with open(f"{out}/list.pkl", 'wb') as f:
         pickle.dump(clusterList, f)
 
