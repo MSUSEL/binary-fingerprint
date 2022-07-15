@@ -35,7 +35,7 @@ def constructMatrix (directory, out, hashfile, threshold):
             folderWithIcos.append(folder)
 
     print ("Running comparisons:")
-    folderWithIcos = folderWithIcos[:50]
+    # folderWithIcos = folderWithIcos[:50]
     while folder := folderWithIcos.pop(0):
         initIcos = os.listdir(f"{directory}/{folder}/icos")
         for cmpFld in folderWithIcos:
@@ -94,7 +94,7 @@ if __name__ == "__main__":
             help='directory to scan from')
     parser.add_argument("-c", '--classif', dest='classif', type=str, required=True,
             help='file containing hashes and classif info')
-    parser.add_argument("-t", '--threshold', dest='thresh', type=int, default=.5,
+    parser.add_argument("-t", '--threshold', dest='thresh', type=float, default=.5,
             help='comparison index')
     parser.add_argument('-o', '--output', dest='out', type=str, default='clusters',
             help='output directory')
