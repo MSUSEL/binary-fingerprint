@@ -31,6 +31,10 @@ def constructMatrix (directory, out, hashfile, threshold):
     print ("Finding icons:")
     folderWithIcos = []
     for folder in os.listdir(directory):
+        for i in os.listdir(f"{directory}/{folder}/icos"):
+            if os.stat(f"{directory}/{folder}/icos/{i}").st_size < 83:
+                os.remove(f"{directory}/{folder}/icos/{i}")
+                print (f"Removed {i} for being too small")
         if len(os.listdir(f"{directory}/{folder}/icos")) > 0:
             folderWithIcos.append(folder)
 
