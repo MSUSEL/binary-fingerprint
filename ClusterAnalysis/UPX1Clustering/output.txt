@@ -1,0 +1,95 @@
+Finding Matching Images:
+Found 337 matching images
+Running comparisons:
+Creating Graph and clustering:
+Building Hash Database:
+Labeling and saving clusters:
+Cluster 0: 
+trojan_doina/invader - 1
+trojan_ursu/fakems - 1
+
+Cluster 1: 
+trojan_picsys/hllw - 2
+trojan_picsys/spnr - 1
+worm_picsys/hidp2p - 1
+worm_picsys/hllw - 1
+worm_picsys/r4focd2 - 1
+worm_picsys/spnr - 5
+
+Cluster 2: 
+worm_picsys - 1
+worm_picsys/hidp2p - 12
+worm_picsys/hllw - 39
+worm_picsys/yoof - 5
+
+Cluster 3: 
+trojan_meger/based - 1
+trojan_meger/koobface - 5
+trojan_meger/maxim - 1
+
+Cluster 4: 
+worm_picsys/hiddldprng - 3
+worm_picsys/yoof - 1
+
+Cluster 5: 
+trojan_dialer/tibsystems - 8
+
+Cluster 6: 
+trojan_femad/byteverify - 2
+
+Cluster 7: 
+trojan_adload - 15
+trojan_tedy/adload - 2
+trojan_ursu/adload - 5
+trojan_zusy/adload - 1
+
+Cluster 8: 
+trojan_johnnie/meger - 1
+trojan_meger/based - 2
+
+Cluster 9: 
+trojan_adload/artemis - 3
+trojan_adload/cobra - 2
+trojan_adload/killsoul - 1
+trojan_adload/rugo - 2
+
+Cluster 10: 
+trojan_farfli/winnt - 4
+
+Cluster 11: 
+trojan_netins/adload - 1
+trojan_ulise/netins - 1
+
+Cluster 12: 
+trojan_dumpex - 1
+trojan_pfpk/filerepmalware - 1
+
+Cluster 13: 
+trojan_autoit/drop - 1
+trojan_autoit/scarsi - 1
+trojan_autoit/spnr - 1
+trojan_autoit/zaccess - 1
+
+Cluster 14: 
+trojan_dialer/porn - 1
+trojan_dialer/tibsystems - 11
+
+Cluster 15: 
+trojan_dialer/tibsystems - 2
+
+Cluster 16: 
+trojan_dialer/tibsystems - 2
+
+Cluster 17: 
+trojan_netins/adload - 1
+trojan_ulise/netins - 1
+
+Cluster 18: 
+worm_momac/amgfa83 - 1
+worm_momac/macom - 1
+
+Cluster 19: 
+trojan_barys/buterat - 1
+trojan_buterat/razy - 1
+
+Finished in 59.454251527786255 seconds

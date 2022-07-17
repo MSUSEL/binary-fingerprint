@@ -1,0 +1,306 @@
+Finding Matching Images:
+Removed rsrc.png for being too small
+Removed rsrc.png for being too small
+Removed rsrc.png for being too small
+Removed rsrc.png for being too small
+Removed rsrc.png for being too small
+Found 952 matching images
+Running comparisons:
+Creating Graph and clustering:
+Building Hash Database:
+Labeling and saving clusters:
+
+Cluster 0: 
+trojan_aksula/kazy - 1
+trojan_aksula/osxj - 1
+trojan_aksula/r31c4eg - 1
+
+Cluster 1: 
+trojan_dangerousobject/artemis - 1
+trojan_hthg/trojan2 - 1
+
+Cluster 2: 
+adware_baserch/nsis - 2
+trojan_artemis - 1
+trojan_baidusearch - 10
+trojan_baidusearch/nsis - 8
+trojan_baserch/baidusearch - 2
+trojan_baserch/nsis - 2
+trojan_malwaref/oeps - 1
+trojan_nsis/baserch - 1
+
+Cluster 3: 
+trojan_buzus/fenj - 14
+trojan_buzus/gamevance - 44
+trojan_buzus/kazy - 19
+trojan_buzus/razy - 18
+trojan_buzus/ulise - 52
+
+Cluster 4: 
+trojan_tdss/olmarik - 3
+
+Cluster 5: 
+trojan_dlgj/kryptik - 1
+trojan_kryptik/fraudtool - 1
+
+Cluster 6: 
+trojan_shellobject/aibfkshk - 2
+
+Cluster 7: 
+trojan_winwebsec/kryptik - 1
+trojan_winwebsec/smartfortress2012 - 1
+
+Cluster 8: 
+trojan_doina/invader - 1
+trojan_ursu/fakems - 1
+
+Cluster 9: 
+adware_comet/starware - 1
+trojan_msil/dldrx - 3
+trojan_msil/qqhelper - 2
+trojan_msil/tspy - 2
+trojan_msil/zapchast - 1
+
+Cluster 10: 
+trojan_johnnie/meger - 1
+trojan_meger/based - 3
+trojan_meger/koobface - 5
+trojan_meger/maxim - 1
+
+Cluster 11: 
+trojan_kryptik/fraudtool - 2
+trojan_kryptik/winwebsec - 1
+
+Cluster 12: 
+trojan_ - 1
+trojan_archsms/hoax - 8
+trojan_archsms/smshoax - 8
+trojan_graftor/archsms - 1
+
+Cluster 13: 
+trojan_banbra/wsqpaw5fmlpo - 1
+trojan_wsqpaoszy2jo/banbra - 1
+
+Cluster 14: 
+trojan_startpage/r11c3a3 - 1
+trojan_strictor/dorifel - 3
+
+Cluster 15: 
+trojan_adload/startpage - 5
+trojan_startpage/adload - 2
+
+Cluster 16: 
+adware_baserch/nsis - 2
+trojan_baidusearch - 1
+trojan_nsis/baserch - 2
+
+Cluster 17: 
+trojan_femac/startpage - 1
+trojan_startpage/femac - 1
+
+Cluster 18: 
+trojan_adload - 13
+trojan_adload/artemis - 2
+trojan_adload/cobra - 2
+trojan_adload/killsoul - 1
+trojan_adload/rugo - 2
+trojan_tedy/adload - 2
+trojan_ursu/adload - 5
+trojan_zusy/adload - 1
+
+Cluster 19: 
+trojan_graftor/vbkrypt - 1
+trojan_vbkrypt/artemis - 1
+trojan_vbkrypt/graftor - 1
+
+Cluster 20: 
+trojan_kryptik/fraudtool - 2
+
+Cluster 21: 
+trojan_dlgj/fraudtool - 1
+trojan_winwebsec/dlgj - 1
+
+Cluster 22: 
+trojan_autoit/spnr - 2
+
+Cluster 23: 
+trojan_vbkrypt/bmkfrb2pdxpi2 - 1
+trojan_vbkrypt/bmkfrbu6tiai2 - 1
+
+Cluster 24: 
+trojan_dialer/farfli - 1
+trojan_dialer/gamethief - 1
+trojan_pcclient2/dialer - 1
+
+Cluster 25: 
+trojan_dlgj/kryptik - 1
+trojan_kryptik/winwebsec - 1
+trojan_symmi/winwebsec - 1
+trojan_winwebsec/fraudtool - 1
+
+Cluster 26: 
+trojan_sinowal/cryp - 1
+trojan_sinowal/kryptik - 2
+
+Cluster 27: 
+trojan_msil/jorik - 1
+trojan_msil/xtrat - 1
+trojan_xtrat/jorik - 1
+
+Cluster 28: 
+trojan_ - 1
+trojan_flystudio/unwanted - 1
+
+Cluster 29: 
+trojan_dlgj/kryptik - 2
+
+Cluster 30: 
+trojan_netins/adload - 5
+trojan_ulise/netins - 2
+
+Cluster 31: 
+trojan_dlgj/winwebsec - 1
+trojan_kryptik/winwebsec - 1
+
+Cluster 32: 
+trojan_alicia/aog629ei - 1
+trojan_alicia/bkdr - 2
+
+Cluster 33: 
+trojan_cinmus/cinmeng - 2
+
+Cluster 34: 
+trojan_dumpex - 1
+trojan_pfpk/filerepmalware - 1
+
+Cluster 35: 
+trojan_xmedia/graftor - 2
+
+Cluster 36: 
+trojan_graftor/kryptik - 1
+trojan_winwebsec/kryptik - 1
+
+Cluster 37: 
+trojan_kazy/artemis - 1
+trojan_kazy/axyu - 1
+trojan_razy/vbkrypt - 1
+
+Cluster 38: 
+trojan_sasfis/dokstormac - 1
+trojan_sasfis/zusy - 1
+
+Cluster 39: 
+trojan_startpage/dorkbot - 1
+trojan_startpage/plingky - 1
+trojan_startpage/r11c3a3 - 3
+trojan_startpage/smil - 1
+trojan_strictor/dorifel - 2
+trojan_zusy/plingky - 1
+
+Cluster 40: 
+trojan_lurka/lurker - 2
+
+Cluster 41: 
+trojan_graftor/genmalicious - 3
+trojan_graftor/mucc - 1
+
+Cluster 42: 
+trojan_buzus/gamevance - 2
+trojan_gamevance/buzus - 2
+
+Cluster 43: 
+trojan_fugrafa/menti - 1
+trojan_graftor/menti - 1
+trojan_graftor/yakes - 1
+
+Cluster 44: 
+trojan_graftor/farfli - 1
+trojan_winnt/farfli - 1
+
+Cluster 45: 
+trojan_adload/cobra - 1
+trojan_adload/dollarrevenue - 1
+
+Cluster 46: 
+trojan_fraudload/winspywareprotect - 1
+trojan_fraudload/zusy - 1
+
+Cluster 47: 
+ - 2
+
+Cluster 48: 
+trojan_ - 4
+
+Cluster 49: 
+trojan_pendix/dloader - 2
+
+Cluster 50: 
+trojan_dlgj/securitytool - 1
+trojan_kryptik/fraudtool - 1
+trojan_winwebsec/kryptik - 1
+
+Cluster 51: 
+trojan_cosne/farfli - 1
+trojan_reconyc/cosne - 1
+
+Cluster 52: 
+trojan_dialer/file - 1
+trojan_pespin/dialer - 1
+
+Cluster 53: 
+trojan_huwx/swisyn - 1
+trojan_swisyn/auzw - 1
+trojan_zusy/adwarex - 1
+
+Cluster 54: 
+trojan_perfloger/perflogger - 1
+trojan_perflogger/perfloger - 1
+
+Cluster 55: 
+trojan_kryptik/winwebsec - 2
+
+Cluster 56: 
+trojan_plingky/downloader1 - 2
+trojan_plingky/smil - 1
+
+Cluster 57: 
+trojan_hupigon/graftor - 2
+
+Cluster 58: 
+trojan_plingky/genome - 1
+trojan_plingky/startpage - 1
+trojan_strictor/dorifel - 1
+
+Cluster 59: 
+trojan_vbkrypt/memscan - 2
+
+Cluster 60: 
+fakeav_kryptik/smyc - 1
+trojan_kryptik/fraudtool - 1
+
+Cluster 61: 
+trojan_dlgj/kryptik - 2
+
+Cluster 62: 
+trojan_kryptik/fraudtool - 1
+trojan_kryptik/winwebsec - 1
+trojan_symmi/winwebsec - 1
+
+Cluster 63: 
+fakeav_kryptik/smyc - 1
+trojan_winwebsec/fraudtool - 1
+
+Cluster 64: 
+trojan_s5bty7ooy/hideproc - 1
+trojan_sd70g4foy/hideproc - 1
+
+Cluster 65: 
+trojan_kryptik/winwebsec - 1
+trojan_winwebsec/fraudtool - 1
+
+Cluster 66: 
+trojan_simda/r47cdi9 - 1
+trojan_simda/rodricter - 1
+trojan_simda/wqei - 1
+
+Finished in 617.2107861042023 seconds
