@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 import shutil
 import argparse
@@ -38,6 +39,12 @@ def constructImage (directory, threshold, name):
             else:
                 folderWithImgs.append(folder)
 
+    if len(folderWithImgs) == 0:
+        print ("No matches found, exiting....")
+        sys.exit(1)
+    else:
+        print (f"Found {len(folderWithImgs)} matching images")
+
     print ("Running comparisons:")
     # folderWithImgs = folderWithImgs[:50]
     while folder := folderWithImgs.pop(0):
@@ -68,6 +75,12 @@ def constructIcon (directory, threshold):
                 print (f"Removed {i} for being too small")
         if len(os.listdir(f"{directory}/{folder}/icos")) > 0:
             folderWithIcos.append(folder)
+
+    if len(folderWithIcos) == 0:
+        print ("No matches found, exiting....")
+        sys.exit(1)
+    else:
+        print (f"Found {len(folderWithIcos)} icons")
 
     print ("Running comparisons:")
     # folderWithIcos = folderWithIcos[:50]
@@ -105,7 +118,7 @@ def labelClusters (directory, out, hashfile, pklfile, section):
     print ("Building Hash Database:")
     hashes = buildDic(hashfile)
 
-    print ("Labeling and saving clusters:")
+    print ("Labeling and saving clusters:\n")
     for count, i in enumerate(clusterList):
         os.makedirs(f"{out}/cluster{count}")
         print (f"Cluster {count}: ")
