@@ -1,0 +1,35 @@
+Report Generated:
+
+
+Errors:
+    779 - File Not Found
+    162 - Header Length Issue
+     97 - Invalid start byte
+     80 - Unknown File Extension
+     45 - Invalid NT Header
+     36 - Invalid e_lfanew
+     27 - Embedded null byte
+     21 - NoneType cant save
+      6 - Invalid continuation byte
+      1 - Data cant be fetched
+      1 - Index out of range
+
+Total In: 7900
+Total Success: 6645
+Total Errors: 1255
+
+Section Counts:
+    261 - 0 Sections
+   4552 - 1 Sections
+   1379 - 2 Sections
+    225 - 3 Sections
+    138 - 4 Sections
+     59 - 5 Sections
+     28 - 6 Sections
+      3 - 7 Sections
+
+With Icons: 1443
+Without Icons: 6457
+
+Packed: 2156
+Not Packed: 5744

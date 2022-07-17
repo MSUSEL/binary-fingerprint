@@ -1,0 +1,783 @@
+Building Hash Database:
+Labeling and saving clusters:
+Cluster 0: 
+downloader_dialer/tibsystems - 1
+trojan_dialer/dial - 1
+trojan_dialer/doina - 1
+trojan_dialer/tibsystems - 51
+
+Cluster 1: 
+trojan_ - 1
+trojan_auuuqxhi/vake - 1
+trojan_bancos/artemis - 1
+trojan_bancos/dhmw - 1
+trojan_bancos/mafod - 1
+trojan_barys/aspm - 1
+trojan_barys/beebone - 1
+trojan_beebone/vbobfus - 1
+trojan_bifrose/aacc - 1
+trojan_bifrose/aach - 1
+trojan_bifrose/krypt - 1
+trojan_buzus/krypt - 1
+trojan_buzus/vbinject - 1
+trojan_constructor/rcbcdf1 - 1
+trojan_elzob/graftor - 1
+trojan_feiyo/r002c0dlj18 - 1
+trojan_filerepmalware/occamy - 1
+trojan_fjoiner - 4
+trojan_genlot - 1
+trojan_gosys/avfk - 3
+trojan_gosys/vobfus - 1
+trojan_gyner/nosys - 1
+trojan_hackology/win32sys - 2
+trojan_inuk/notpa - 4
+trojan_kazy/bbjp - 1
+trojan_krypt/vbtrojan - 1
+trojan_msil/msilperseus - 1
+trojan_msil/zusy - 3
+trojan_networm/bkdr - 1
+trojan_nosys/protected - 1
+trojan_notpa/bdoor - 1
+trojan_notpa/bkdr - 2
+trojan_notpa/icqnuke - 5
+trojan_notpa/notp - 2
+trojan_notpa/nuke - 1
+trojan_notpa/win9x - 1
+trojan_pwsteal - 1
+trojan_razy - 1
+trojan_rugo/jbsv - 1
+trojan_sosx9rki - 1
+trojan_starter/chekafev - 1
+trojan_startpage/startp - 1
+trojan_vbinject/androm - 1
+trojan_vbinject/vbcrypt - 1
+trojan_vbkrypt/kogc - 2
+trojan_vbkrypt/tomb - 1
+trojan_vbkrypt/vbinject - 1
+trojan_vbmod/networm - 1
+trojan_vobfus/conjar - 1
+trojan_vobfus/vbinject - 1
+trojan_xtreme/afuh - 1
+trojan_zemac/badoor - 2
+trojan_zemac/bkdr - 1
+worm_vobfus/symmi - 1
+worm_vobfus/vbna - 1
+
+Cluster 2: 
+trojan_netins/adload - 5
+trojan_ulise/netins - 2
+
+Cluster 3: 
+trojan_banbra/barys - 5
+trojan_banbra/comsurveilsys - 3
+trojan_banload - 2
+trojan_barys/banbra - 2
+trojan_keylogger/mailer - 1
+trojan_poisonivy - 1
+trojan_swisyn/mudrop - 1
+
+Cluster 4: 
+trojan_bifrose/tosxmwb - 1
+trojan_chifrax/spnr - 1
+trojan_dloader - 1
+trojan_flyst/genome - 1
+trojan_hupigon/ugvrblab - 1
+trojan_swisyn/mofksys - 3
+trojan_taosxtf/bifrose - 1
+trojan_winical/rugo - 1
+
+Cluster 5: 
+adware_hotbar/graftor - 1
+adware_hotbar/zango - 1
+adware_zusy/jorik - 1
+dropper_malf/gen8 - 1
+trojan_ - 1
+trojan_adload/startpage - 5
+trojan_banbra/comsurveilsys - 1
+trojan_comsurveilsys/artemis - 1
+trojan_cosne/farfli - 1
+trojan_farfli/cosne - 1
+trojan_filerepmalware/onlinegames - 1
+trojan_flystud/artemis - 1
+trojan_graftor/dorifel - 1
+trojan_graftor/farfli - 1
+trojan_huwx/swisyn - 1
+trojan_keylogger - 1
+trojan_koutodoor/cerber - 1
+trojan_koutodoor/ktodoor - 1
+trojan_msilperseus/genome - 1
+trojan_nsis/flystudio - 1
+trojan_plingky/downloader1 - 2
+trojan_plingky/genome - 1
+trojan_plingky/jnvn - 1
+trojan_plingky/smil - 1
+trojan_plingky/startpage - 1
+trojan_reconyc/cosne - 1
+trojan_ressdt/rootkit - 1
+trojan_rootkit/filka - 1
+trojan_scar/bofang - 1
+trojan_startpage/adload - 2
+trojan_startpage/dorkbot - 1
+trojan_startpage/nsis - 1
+trojan_startpage/plingky - 1
+trojan_startpage/r11c3a3 - 4
+trojan_startpage/smil - 1
+trojan_strictor/dorifel - 6
+trojan_swisyn/huwx - 1
+trojan_swisyn/mofksys - 1
+trojan_swisyn/vebby - 1
+trojan_winnt/farfli - 1
+trojan_zusy/plingky - 1
+
+Cluster 6: 
+trojan_mofksys/gosys - 1
+trojan_mofksys/swisyn - 1
+trojan_strictor/swisyn - 1
+trojan_swisyn/spnr - 1
+
+Cluster 7: 
+trojan_archsms/smshoax - 2
+trojan_autoit - 1
+trojan_autoit/artemis - 2
+trojan_autoit/drop - 1
+trojan_autoit/euxi - 1
+trojan_autoit/llac - 1
+trojan_autoit/nymeria - 1
+trojan_autoit/pamac - 1
+trojan_autoit/rcbc7gv - 1
+trojan_autoit/scarsi - 1
+trojan_autoit/spnr - 3
+trojan_autoit/zaccess - 1
+trojan_awwkprng/imdwhn - 1
+trojan_banload/ewhdg - 1
+trojan_barys/mofksys - 2
+trojan_blackhole/flystudio - 2
+trojan_buzy/pasta - 1
+trojan_ckc97yv/based - 1
+trojan_conjar/fraudpack - 1
+trojan_elzs/r29c3j7 - 1
+trojan_epau - 1
+trojan_flystudio - 1
+trojan_homac/shark - 1
+trojan_huwx/swisyn - 1
+trojan_kazy/msil - 1
+trojan_minggy/bifrost - 1
+trojan_mofksys/gosys - 1
+trojan_mofksys/razy - 1
+trojan_mofksys/swisyn - 5
+trojan_msil/krypt - 2
+trojan_onlinegames/ponystealer - 1
+trojan_powp/r72c2ec - 1
+trojan_prorat/r9ca5riib - 1
+trojan_swisyn - 1
+trojan_swisyn/asxj - 1
+trojan_swisyn/auzw - 6
+trojan_swisyn/barys - 3
+trojan_swisyn/bikxq9ci - 7
+trojan_swisyn/gosys - 3
+trojan_swisyn/huwx - 1
+trojan_swisyn/mofksys - 21
+trojan_swisyn/siggen3 - 1
+trojan_swisyn/spnr - 1
+trojan_swisyn/ulise - 3
+trojan_swisyn/vbcode - 3
+trojan_swisyn/vebby - 4
+trojan_swisyn/zusy - 1
+trojan_zusy/dokstormac - 1
+virus_ditex/idtsys - 1
+
+Cluster 8: 
+trojan_swisyn/auzw - 2
+trojan_swisyn/mofksys - 1
+
+Cluster 9: 
+banker_deepscan/bancos - 1
+trojan_bancos/bancosx - 1
+trojan_bancos/hmkdaauyq2fb - 1
+trojan_bancos/juekawhgpkfb - 1
+trojan_loader - 1
+trojan_r047c0efp16 - 1
+
+Cluster 10: 
+adware_cinmus/amxl - 1
+adware_cinmus/aomz - 1
+adware_cinmus/asgl - 1
+adware_cinmus/obfuscated - 1
+adware_comet/bulz - 1
+adware_comet/cursor - 1
+adware_comet/starware - 3
+adware_newweb/adclicker - 2
+adware_newweb/everda - 2
+adware_shopper/hotbar - 1
+trojan_cinmus/bbsu - 1
+trojan_cinmus/cinmeng - 1
+trojan_cinmus/gray - 1
+trojan_cinmus/obfuscated - 5
+trojan_cinmus/rootkit - 3
+trojan_cinmus/x2nfskf - 1
+trojan_cinmus/xajb5rl - 1
+trojan_cinmus/ysmarsys - 2
+trojan_cinmus/yygd0xm - 1
+trojan_obfuscated/cinmus - 2
+trojan_sefnit/kazy - 1
+trojan_sefnit/razy - 1
+trojan_swisyn/huwx - 1
+trojan_vapsup/w1yirwjib - 1
+
+Cluster 11: 
+trojan_barys/vebby - 1
+trojan_mofksys/swisyn - 2
+trojan_swisyn/mofksys - 3
+trojan_swisyn/vebby - 1
+trojan_symmi/swisyn - 1
+
+Cluster 12: 
+adware_baserch/nsis - 2
+trojan_artemis - 1
+trojan_baidusearch - 10
+trojan_baidusearch/nsis - 8
+trojan_baserch/baidusearch - 2
+trojan_baserch/nsis - 2
+trojan_malwaref/oeps - 1
+trojan_nsis/baserch - 1
+
+Cluster 13: 
+trojan_ - 1
+trojan_archsms/hoax - 8
+trojan_archsms/smshoax - 8
+trojan_flystudio - 2
+trojan_flystudio/genome - 1
+trojan_flystudio/unwanted - 2
+trojan_iroffer/malat - 1
+trojan_midgare/trojan2 - 1
+trojan_swisyn/auzw - 1
+
+Cluster 14: 
+trojan_cinmus/cinmeng - 2
+
+Cluster 15: 
+adware_cinmus - 1
+adware_comet/starware - 1
+adware_zwangi/onestep - 1
+trojan_artemis/shellcode - 1
+trojan_dnschanger/zlob - 1
+trojan_msil/dldrx - 3
+trojan_msil/qqhelper - 2
+trojan_msil/tspy - 2
+trojan_msil/zapchast - 1
+trojan_nsis - 1
+
+Cluster 16: 
+trojan_dialer/porn - 2
+trojan_dialer/tibsystems - 3
+trojan_sinowal/cryp - 1
+trojan_sinowal/kryptik - 2
+
+Cluster 17: 
+trojan_mofksys/aabn - 85
+trojan_mofksys/alefa - 7
+trojan_mofksys/gosys - 3
+trojan_mofksys/swisyn - 24
+trojan_swisyn/bner - 1
+trojan_swisyn/mofksys - 1
+trojan_swisyn/vebby - 1
+
+Cluster 18: 
+trojan_bmkfrlotvufi2/aybc - 1
+trojan_bmkfrx1at5hi2/ayak - 1
+trojan_bu0brlk6joei2/bancos - 1
+trojan_bu0brnjp7rei2/vbkrypt - 1
+trojan_bu0brtxcnxii2/bancos - 1
+trojan_bu0brx5hqzei2/bancos - 1
+trojan_cu0brd2ws1ci2/ytbx - 1
+trojan_cu0brfkplzii2/ytbx - 1
+trojan_cu0brrpgqegi2/ytbx - 1
+trojan_cu0brzq0kedi2/ytbx - 1
+trojan_graftor/vbkrypt - 4
+trojan_johnnie/vbkrypt - 6
+trojan_tqoi2/bmkfrft - 1
+trojan_vbkrypt/artemis - 2
+trojan_vbkrypt/bmkfrb2pdxpi2 - 1
+trojan_vbkrypt/bmkfrbu6tiai2 - 1
+trojan_vbkrypt/graftor - 1
+
+Cluster 19: 
+downloader_banload/dloader - 1
+trojan_banload/upack - 1
+trojan_bifrose/refroso - 2
+trojan_bredolab/artemis - 1
+trojan_pwstealer/keylogger - 1
+trojan_refroso/bifrose - 1
+trojan_s97osxni/keylog - 1
+
+Cluster 20: 
+trojan_lurka/aajo - 2
+trojan_lurka/lurker - 2
+
+Cluster 21: 
+trojan_johnnie/atraps - 2
+trojan_johnnie/msil - 1
+trojan_kazy/atraps - 1
+trojan_lurka/winnt - 1
+trojan_msil/gendownloader - 1
+trojan_msil/kujnalod - 1
+trojan_msilperseus/jorik - 1
+trojan_razy/msil - 1
+
+Cluster 22: 
+trojan_barys/crkn - 1
+trojan_crkn/r4fcecv - 1
+
+Cluster 23: 
+trojan_banbra/comsurveilsys - 2
+
+Cluster 24: 
+trojan_ - 4
+
+Cluster 25: 
+trojan_swisyn/auzw - 1
+trojan_swisyn/vebby - 1
+
+Cluster 26: 
+trojan_murofet/licat - 6
+trojan_murofet/zbot - 1
+virus_murofet/zbot - 1
+
+Cluster 27: 
+trojan_bancos/nspack - 1
+trojan_dangerousobject/atraps - 1
+trojan_dhdnoif/qhost - 1
+trojan_graftor/ldpinch - 1
+trojan_hideproc/rootkit - 1
+trojan_mofksys/swisyn - 3
+trojan_s5bty7ooy/hideproc - 1
+trojan_sality/mofksys - 1
+trojan_sd70g4foy/hideproc - 1
+trojan_slxwgoniy/swisyn - 1
+trojan_startpage/qhost - 1
+trojan_swisyn/auzw - 3
+trojan_swisyn/bner - 3
+trojan_swisyn/mofksys - 15
+trojan_swisyn/r47c2af - 1
+trojan_swisyn/sbygz3niy - 2
+trojan_swisyn/vebby - 4
+trojan_szysywaiy/mofksys - 1
+trojan_t5wiiy/swisyn - 1
+
+Cluster 28: 
+trojan_swisyn/auzw - 12
+trojan_swisyn/graftor - 4
+trojan_swisyn/mofksys - 1
+trojan_swisyn/vebby - 1
+
+Cluster 29: 
+trojan_bancos/bulz - 1
+trojan_bancos/rq0bayaeb1oi - 1
+trojan_bancos/tspy - 1
+
+Cluster 30: 
+trojan_bifrose/biawhllg - 1
+trojan_bifrose/byv7rhjg - 1
+
+Cluster 31: 
+trojan_adload - 13
+trojan_adload/artemis - 2
+trojan_adload/cobra - 3
+trojan_adload/dollarrevenue - 1
+trojan_adload/killsoul - 1
+trojan_adload/rugo - 2
+trojan_tedy/adload - 2
+trojan_ursu/adload - 5
+trojan_zusy/adload - 1
+
+Cluster 32: 
+trojan_swisyn/gosys - 1
+trojan_swisyn/mofksys - 1
+
+Cluster 33: 
+trojan_bancos/infostealer - 1
+trojan_bancos/tspy - 1
+trojan_rtopdtbgh/perfect - 1
+
+Cluster 34: 
+adware_baserch/nsis - 2
+trojan_baidusearch - 1
+trojan_nsis/baserch - 2
+
+Cluster 35: 
+trojan_vbkrypt/memscan - 2
+
+Cluster 36: 
+dropper_constructor/w97m - 1
+hacktool_constructor/macro - 1
+hacktool_constructor/w97m - 1
+trojan_constructor/macro - 2
+trojan_constructor/w97m - 1
+
+Cluster 37: 
+trojan_swisyn/mofksys - 2
+
+Cluster 38: 
+trojan_agent2/archsms - 1
+trojan_archsms/kryptik - 1
+trojan_johnnie/meger - 1
+trojan_meger/based - 3
+trojan_meger/koobface - 5
+trojan_meger/maxim - 1
+
+Cluster 39: 
+trojan_bancos/bu0brvqkzscib - 1
+trojan_bu0brbuw2liib/provon - 1
+
+Cluster 40: 
+trojan_ahrn/banload - 1
+trojan_banload/giku - 1
+trojan_deepscan/cryp - 1
+
+Cluster 41: 
+trojan_swisyn/kazy - 1
+trojan_swisyn/symmi - 2
+
+Cluster 42: 
+trojan_banbra/comsurveilsys - 1
+trojan_banbra/rootkit - 1
+trojan_banbra/susppack - 5
+trojan_banbra/trojanbanker - 1
+
+Cluster 43: 
+trojan_poison/razy - 1
+trojan_razy/poison - 1
+
+Cluster 44: 
+trojan_banbra/wsqpaw5fmlpo - 1
+trojan_banload/barys - 1
+trojan_dokstormac - 1
+trojan_wsqpaoszy2jo/banbra - 1
+
+Cluster 45: 
+trojan_ - 1
+trojan_bubkrqpi/execryptor - 1
+trojan_filerepmetagen/mwpm - 1
+trojan_kolabc/filerepmetagen - 1
+trojan_mwpm - 1
+trojan_mwpm/kolabc - 1
+
+Cluster 46: 
+trojan_dangerousobject/artemis - 1
+trojan_hthg/trojan2 - 1
+
+Cluster 47: 
+ - 2
+
+Cluster 48: 
+trojan_zemac/bkdr - 3
+trojan_zemac/notpad - 3
+trojan_zemac/vbtrojan - 1
+
+Cluster 49: 
+trojan_dangerousobject/vmprotect - 1
+trojan_gen2/bkdr - 1
+trojan_iyeclore/strictor - 1
+trojan_mespam/warezov - 1
+trojan_xmedia/graftor - 3
+trojan_xmedia/rslocal - 2
+trojan_xmedia/trojanclicker - 2
+
+Cluster 50: 
+trojan_fraudload/winspywareprotect - 1
+trojan_fraudload/zusy - 1
+
+Cluster 51: 
+trojan_swisyn/bner - 1
+trojan_swisyn/mofksys - 1
+
+Cluster 52: 
+trojan_alureon/tdss - 1
+trojan_tdss/alureon - 3
+
+Cluster 53: 
+trojan_autoit/beux - 1
+trojan_midgare/homac - 1
+
+Cluster 54: 
+trojan_banbra/dangerousobject - 2
+
+Cluster 55: 
+trojan_constructor/macro - 1
+trojan_macro/constructor - 1
+trojan_moothie/constructor - 2
+
+Cluster 56: 
+adware_gator/gain - 2
+adware_gator/r8shtcki - 1
+
+Cluster 57: 
+adware_comet/apkz - 1
+adware_comet/genome - 1
+adware_comet/starware - 1
+
+Cluster 58: 
+trojan_walrus/constructor - 5
+
+Cluster 59: 
+trojan_zemac/bdoor - 1
+trojan_zemac/bkdr - 1
+trojan_zemac/filerepmalware - 1
+trojan_zemac/r0cbc0cdn14 - 1
+
+Cluster 60: 
+trojan_kazy/artemis - 1
+trojan_kazy/axyu - 1
+trojan_razy/vbkrypt - 1
+
+Cluster 61: 
+trojan_kazy/msil - 2
+
+Cluster 62: 
+trojan_swisyn/gosys - 1
+trojan_swisyn/huwx - 1
+
+Cluster 63: 
+trojan_bz1045/hkpu - 1
+trojan_elzob/graftor - 1
+
+Cluster 64: 
+virus_ditex/idtsys - 1
+virus_lurka/lurker - 1
+
+Cluster 65: 
+trojan_ - 1
+trojan_flystudio/unwanted - 1
+
+Cluster 66: 
+trojan_mofksys/swisyn - 1
+trojan_swisyn/bner - 1
+trojan_swisyn/mofksys - 2
+
+Cluster 67: 
+trojan_mofksys/swisyn - 1
+trojan_swisyn/mofksys - 1
+
+Cluster 68: 
+trojan_ - 1
+trojan_aerw/encpk - 1
+
+Cluster 69: 
+trojan_ - 1
+trojan_artemis - 1
+trojan_flystudio - 1
+
+Cluster 70: 
+trojan_mofksys/swisyn - 1
+trojan_swisyn/mofksys - 1
+
+Cluster 71: 
+trojan_swisyn/auzw - 2
+
+Cluster 72: 
+trojan_archsms/hoax - 1
+trojan_swisyn/gosys - 1
+trojan_swisyn/mofksys - 1
+trojan_swisyn/vbcode - 1
+trojan_swisyn/vebby - 1
+virus_lurka/lurker - 1
+
+Cluster 73: 
+trojan_slefdel - 1
+trojan_swisyn/vebby - 1
+
+Cluster 74: 
+trojan_swisyn/auzw - 13
+
+Cluster 75: 
+trojan_cidox/lampa - 1
+trojan_lampa/cidox - 2
+trojan_lampa/vundo - 2
+
+Cluster 76: 
+trojan_antimcafee/antimca - 2
+
+Cluster 77: 
+trojan_antivirusagentpro/fraudload - 1
+trojan_fraudpack/hqjw - 1
+
+Cluster 78: 
+trojan_banbra/dangerousobject - 2
+
+Cluster 79: 
+trojan_sasfis/dokstormac - 1
+trojan_sasfis/zusy - 1
+
+Cluster 80: 
+trojan_hupigon/ayrq - 1
+trojan_hupigon/cryptocrack - 1
+trojan_hupigon/deepscan - 1
+trojan_hupigon/graftor - 2
+trojan_hupigon/graybird - 1
+trojan_hupigon/pyvaa8g6y8ob - 1
+trojan_hupigon/rxvhcklbk - 1
+
+Cluster 81: 
+trojan_winsys/ddos - 2
+
+Cluster 82: 
+trojan_constructor/macro - 1
+trojan_moothie/constructor - 3
+
+Cluster 83: 
+trojan_simda/r47cdi9 - 1
+trojan_simda/rodricter - 1
+trojan_simda/wqei - 1
+
+Cluster 84: 
+trojan_barys/mofksys - 1
+trojan_swisyn/auzw - 1
+trojan_swisyn/mofksys - 2
+trojan_swisyn/vebby - 1
+
+Cluster 85: 
+trojan_aksula/kazy - 1
+trojan_aksula/osxj - 1
+trojan_aksula/r31c4eg - 1
+
+Cluster 86: 
+trojan_gosys/mofksys - 1
+trojan_swisyn/mofksys - 1
+
+Cluster 87: 
+trojan_buzus/gamevance - 2
+trojan_gamevance/buzus - 2
+
+Cluster 88: 
+trojan_alicia/aog629ei - 1
+trojan_alicia/bkdr - 2
+trojan_falu/trojan2 - 1
+
+Cluster 89: 
+trojan_horse/plattemedia - 1
+trojan_zlob/artemis - 1
+
+Cluster 90: 
+trojan_elzob/graftor - 1
+trojan_memscan/bifrose - 1
+
+Cluster 91: 
+trojan_mofksys/swisyn - 1
+trojan_swisyn/mofksys - 1
+
+Cluster 92: 
+trojan_swisyn/mofksys - 2
+
+Cluster 93: 
+trojan_buzus/graftor - 1
+trojan_stabs/ceeinject - 1
+
+Cluster 94: 
+trojan_ - 1
+trojan_patcher/dynamer - 1
+
+Cluster 95: 
+trojan_vgwartqiocpi/binder - 1
+trojan_zegost/memscan - 1
+
+Cluster 96: 
+adware_casino/casinonet - 2
+adware_casino/casonline - 1
+
+Cluster 97: 
+trojan_fugrafa/menti - 1
+trojan_graftor/menti - 1
+trojan_graftor/yakes - 1
+
+Cluster 98: 
+trojan_swisyn/bner - 2
+trojan_swisyn/mofksys - 1
+
+Cluster 99: 
+trojan_dumpex - 1
+trojan_pfpk/filerepmalware - 1
+trojan_swisyn/mofksys - 1
+
+Cluster 100: 
+trojan_barys/dangerousobject - 1
+trojan_dadobra/comsurveilsys - 1
+
+Cluster 101: 
+trojan_flystudio/adclik - 1
+trojan_flystudio/dangerousobject - 1
+trojan_flystudio/dnkj - 1
+
+Cluster 102: 
+trojan_perfloger/perflogger - 1
+trojan_perflogger/perfloger - 1
+
+Cluster 103: 
+worm_potomac - 1
+worm_potomac/njmv - 1
+
+Cluster 104: 
+trojan_dadobra/based - 1
+trojan_genome/aokosxli - 1
+
+Cluster 105: 
+trojan_swisyn/huwx - 1
+trojan_swisyn/mofksys - 1
+
+Cluster 106: 
+trojan_comsurveilsys/possible - 1
+trojan_huwx/swisyn - 1
+
+Cluster 107: 
+trojan_fraudload/fakeale - 1
+trojan_systemsecurity/winwebsecurity - 1
+
+Cluster 108: 
+trojan_swisyn/mofksys - 1
+trojan_swisyn/vebby - 1
+
+Cluster 109: 
+trojan_artemis/bancos - 1
+trojan_vbkrypt/graftor - 1
+
+Cluster 110: 
+trojan_swisyn/mofksys - 4
+
+Cluster 111: 
+trojan_bancos - 1
+trojan_bancos/s93gjdlid - 1
+
+Cluster 112: 
+trojan_arsys/vpkoe - 1
+trojan_joke/lancheck - 1
+trojan_keylog/pcspy - 1
+worm_gjsfpfpk/dumpex - 1
+
+Cluster 113: 
+trojan_msil/jorik - 1
+trojan_xtrat/jorik - 1
+
+Cluster 114: 
+trojan_lmir/legendmir - 1
+trojan_watcher/gwghost - 1
+
+Cluster 115: 
+trojan_mofksys/swisyn - 1
+trojan_swisyn/mofksys - 1
+
+Cluster 116: 
+trojan_bancos/nspack - 1
+trojan_bancos/tspy - 1
+
+Cluster 117: 
+trojan_peregar/dangerousobject - 1
+trojan_peregar/r011c0wd322 - 1
+
+Cluster 118: 
+trojan_lexip/kryptik - 1
+trojan_renos/kryptik - 1
+
+Cluster 119: 
+trojan_buzus/delfinject - 1
+trojan_lurka/winnt - 1
+
+Finished in 0.2652394771575928 seconds
