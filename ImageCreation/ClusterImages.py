@@ -25,7 +25,38 @@ def calcdiff(im1, im2, directory, f1, f2):
     except Exception:
         return 99999
 
-def constructMatrix (directory, out, hashfile, threshold):
+def constructImage (directory, threshold, name):
+    dic = {}
+
+    print ("Finding Matching Images:")
+    folderWithImgs = []
+    for folder in os.listdir(directory):
+        if os.path.exists(f"{directory}/{folder}/{name}"):
+            if os.stat(f"{directory}/{folder}/{name}").st_size < 83:
+                os.remove(f"{directory}/{folder}/{name}")
+                print (f"Removed {name} for being too small")
+            else:
+                folderWithImgs.append(folder)
+
+    print ("Running comparisons:")
+    folderWithImgs = folderWithImgs[:50]
+    while folder := folderWithImgs.pop(0):
+        im1 = Image.open(f"{directory}/{folder}/{name}")
+        for cmpFld in folderWithImgs:
+            try:
+                im2 = Image.open(f"{directory}/{cmpFld}/{name}")
+                dif = ImageChops.difference(im1, im2)
+                if np.mean(np.array(dif)) < threshold:
+                    dic.setdefault(folder, [])
+                    dic[folder].append(cmpFld)
+            except Exception:
+                continue
+        if len(folderWithImgs) == 0:
+            break
+
+    return dic
+
+def constructIcon (directory, threshold):
     dic = {}
 
     print ("Finding icons:")
@@ -39,7 +70,7 @@ def constructMatrix (directory, out, hashfile, threshold):
             folderWithIcos.append(folder)
 
     print ("Running comparisons:")
-    # folderWithIcos = folderWithIcos[:50]
+    folderWithIcos = folderWithIcos[:50]
     while folder := folderWithIcos.pop(0):
         initIcos = os.listdir(f"{directory}/{folder}/icos")
         for cmpFld in folderWithIcos:
@@ -51,24 +82,23 @@ def constructMatrix (directory, out, hashfile, threshold):
         if len(folderWithIcos) == 0:
             break
 
+    return dic
+
+def createGraph (out, dic):
     print ("Creating Graph and clustering:")
     os.makedirs (out)
     g = nx.Graph(dic)
-    nx.draw(g, with_labels=False)
     with open(f"{out}/graph.pkl", 'wb') as f:
         pickle.dump(g, f)
 
     clusterList = []
     for i in (g.subgraph(c) for c in nx.connected_components(g)):
         clusterList.append(list(i))
-        # print (list(i))
 
     with open(f"{out}/list.pkl", 'wb') as f:
         pickle.dump(clusterList, f)
 
-    labelClusters (directory, out, hashfile, f"{out}/list.pkl")
-
-def labelClusters (directory, out, hashfile, pklfile):
+def labelClusters (directory, out, hashfile, pklfile, section):
     with open (pklfile, "rb") as f:
         clusterList = pickle.load(f)
 
@@ -84,8 +114,11 @@ def labelClusters (directory, out, hashfile, pklfile):
             amts.setdefault(hashes[j], 0)
             amts[hashes[j]] += 1
 
-            for ico in os.listdir(f"{directory}/{j}/icos"):
-                shutil.copyfile(f"{directory}/{j}/icos/{ico}", f"{out}/cluster{count}/{ico.replace('b', j)}")
+            if section is not None:
+                shutil.copyfile(f"{directory}/{j}/{section}", f"{out}/cluster{count}/{j}.png")
+            else:
+                for ico in os.listdir(f"{directory}/{j}/icos"):
+                    shutil.copyfile(f"{directory}/{j}/icos/{ico}", f"{out}/cluster{count}/{ico.replace('b', j)}")
 
         for j in sorted(amts):
             print (f"{j} - {amts[j]}")
@@ -102,16 +135,28 @@ if __name__ == "__main__":
             help='comparison index')
     parser.add_argument('-o', '--output', dest='out', type=str, default='clusters',
             help='output directory')
-    parser.add_argument("-l", '--list', dest='l', type=str,
-            help='pickle file from saved clustered list')
+    parser.add_argument("-li", dest='icolist', type=str,
+            help='pickle file from saved ico clustered list')
+    parser.add_argument("-ls", dest='sectionlist', type=str,
+            help='pickle file from saved section clustered list')
+    parser.add_argument("-n", '--name', dest='name', type=str,
+            help='name of section to compare')
 
     args = parser.parse_args()
 
     start = time.time()
 
-    if args.l is not None:
-        labelClusters(args.dir, args.out, args.classif, args.l)
+    if args.icolist is not None:
+        labelClusters(args.dir, args.out, args.classif, args.icolist, False)
+    if args.sectionlist is not None:
+        labelClusters(args.dir, args.out, args.classif, args.sectionlist, True)
+    elif args.name is not None:
+        dic = constructImage(args.dir, args.thresh, args.name)
+        createGraph (args.out, dic)
+        labelClusters (args.dir, args.out, args.classif, f"{args.out}/list.pkl", args.name)
     else:
-        constructMatrix(args.dir, args.out, args.classif, args.thresh)
+        dic = constructIcon(args.dir, args.thresh)
+        createGraph (args.out, dic)
+        labelClusters (args.dir, args.out, args.classif, f"{args.out}/list.pkl", None)
 
     print (f"Finished in {time.time() - start} seconds")
