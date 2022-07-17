@@ -39,7 +39,7 @@ def constructImage (directory, threshold, name):
                 folderWithImgs.append(folder)
 
     print ("Running comparisons:")
-    folderWithImgs = folderWithImgs[:50]
+    # folderWithImgs = folderWithImgs[:50]
     while folder := folderWithImgs.pop(0):
         im1 = Image.open(f"{directory}/{folder}/{name}")
         for cmpFld in folderWithImgs:
@@ -70,7 +70,7 @@ def constructIcon (directory, threshold):
             folderWithIcos.append(folder)
 
     print ("Running comparisons:")
-    folderWithIcos = folderWithIcos[:50]
+    # folderWithIcos = folderWithIcos[:50]
     while folder := folderWithIcos.pop(0):
         initIcos = os.listdir(f"{directory}/{folder}/icos")
         for cmpFld in folderWithIcos:
