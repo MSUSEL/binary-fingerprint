@@ -147,9 +147,9 @@ if __name__ == "__main__":
     start = time.time()
 
     if args.icolist is not None:
-        labelClusters(args.dir, args.out, args.classif, args.icolist, False)
-    if args.sectionlist is not None:
-        labelClusters(args.dir, args.out, args.classif, args.sectionlist, True)
+        labelClusters(args.dir, args.out, args.classif, args.icolist, None)
+    elif args.sectionlist is not None:
+        labelClusters(args.dir, args.out, args.classif, args.sectionlist, args.name)
     elif args.name is not None:
         dic = constructImage(args.dir, args.thresh, args.name)
         createGraph (args.out, dic)
