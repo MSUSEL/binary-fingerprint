@@ -1,0 +1,38 @@
+Finding Matching Images:
+Found 110 matching images
+Running comparisons:
+Creating Graph and clustering:
+Building Hash Database:
+Labeling and saving clusters:
+
+Cluster 0: 
+trojan_zemac/bkdr - 1
+trojan_zemac/r0cbc0cdn14 - 1
+
+Cluster 1: 
+trojan_adload/startpage - 5
+trojan_startpage/adload - 2
+
+Cluster 2: 
+trojan_delfinject/vzcsys - 1
+trojan_vzcsys/delfinject - 1
+
+Cluster 3: 
+trojan_alicia/bkdr - 2
+
+Cluster 4: 
+ - 2
+
+Cluster 5: 
+trojan_ - 4
+
+Cluster 6: 
+virus_momac/aup3l1cc - 1
+virus_momac/hllo - 1
+
+Cluster 7: 
+trojan_simda/r47cdi9 - 1
+trojan_simda/rodricter - 1
+trojan_simda/wqei - 1
+
+Finished in 24.859514236450195 seconds
