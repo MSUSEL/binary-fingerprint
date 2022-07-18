@@ -1,0 +1,13 @@
+Finding Matching Images:
+Found 555 matching images
+Running comparisons:
+Creating Graph and clustering:
+Building Hash Database:
+Labeling and saving clusters:
+
+Cluster 0: 
+trojan_bancos/ntos - 17
+trojan_bancos/zbot - 537
+trojan_zbot/bancos - 1
+
+Finished in 58.345258712768555 seconds

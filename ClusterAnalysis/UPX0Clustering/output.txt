@@ -1,0 +1,54 @@
+Finding Matching Images:
+Found 91 matching images
+Running comparisons:
+Creating Graph and clustering:
+Building Hash Database:
+Labeling and saving clusters:
+
+Cluster 0: 
+trojan_picsys/hllw - 2
+trojan_picsys/spnr - 1
+worm_picsys/hidp2p - 1
+worm_picsys/hllw - 1
+worm_picsys/r4focd2 - 1
+worm_picsys/spnr - 5
+
+Cluster 1: 
+trojan_adload - 15
+trojan_tedy/adload - 2
+trojan_ursu/adload - 5
+trojan_zusy/adload - 1
+
+Cluster 2: 
+worm_picsys/hidp2p - 2
+
+Cluster 3: 
+trojan_johnnie/meger - 1
+trojan_meger/based - 2
+
+Cluster 4: 
+trojan_netins/adload - 5
+trojan_ulise/netins - 2
+
+Cluster 5: 
+downloader_femad/dldr - 1
+trojan_femad - 1
+
+Cluster 6: 
+trojan_dumpex - 1
+trojan_pfpk/filerepmalware - 1
+
+Cluster 7: 
+worm_picsys/hidp2p - 2
+
+Cluster 8: 
+downloader_femad/dldr - 1
+trojan_femad/dldr - 1
+
+Cluster 9: 
+trojan_xmedia/trojanclicker - 2
+
+Cluster 10: 
+trojan_vbkrypt/memscan - 2
+
+Finished in 4.945239305496216 seconds

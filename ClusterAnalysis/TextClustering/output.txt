@@ -1,5 +1,6 @@
 Finding Matching Images:
 Removed text.png for being too small
+Found 5188 Matching Images:  
 Running comparisons:
 Creating Graph and clustering:
 Building Hash Database:
