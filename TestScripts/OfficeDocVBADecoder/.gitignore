@@ -1,0 +1,6 @@
+oledump/
+*.xlsb
+*.xls
+*.bin
+__pycache__/
+reg.py

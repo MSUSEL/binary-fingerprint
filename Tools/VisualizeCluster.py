@@ -12,36 +12,44 @@ def buildDic (file):
     return dic
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Create matrix of similar things')
+    parser = argparse.ArgumentParser(description='Save cluster for easier viewing')
     parser.add_argument("-d", "--directory", dest="dir", type=str, required=True,
-            help='directory to scan from')
+            help='Directory to scan')
     parser.add_argument("-l", "--list", dest="l", type=str, required=True,
-            help='pickled list')
+            help='Cluster list to use')
     parser.add_argument("-n", "--cluster", dest="numb", type=int, required=True,
-            help='cluster number')
+            help='Cluster number')
     parser.add_argument("-c", "--hashes", dest="classif", type=str, required=True,
-            help='classification file')
-    parser.add_argument("-o", "--out", dest="out", type=str, default="collection",
-            help='directory to save cluster to')
+            help='Classification file')
+    parser.add_argument("-o", "--out", dest="out", type=str,
+            help='Directory to save cluster to')
 
     args = parser.parse_args()
 
     dic = buildDic(args.classif)
     clusterDic = {}
 
-    os.makedirs(args.out, exist_ok=True)
+    out = args.out if args.out is not None else f"cluster{args.numb}"
+    os.makedirs(out, exist_ok=True)
 
     with open(args.l, "rb") as f:
         clusters = pickle.load(f)
-        cluster = clusters[args.numb]
+        try:
+            cluster = clusters[args.numb]
+        except IndexError:
+            print ("Error: Cluster not found")
+            exit (1)
 
         for i in cluster:
             clusterDic.setdefault(dic[i], [])
             clusterDic[dic[i]].append(i)
-            shutil.copytree(f"{args.dir}/{i}", f"{args.out}/{dic[i].replace('/','_')}-{i}")
+            shutil.copytree(f"{args.dir}/{i}", f"{out}/{dic[i].replace('/','_')}-{i}")
 
+    total = 0
     print (f"Cluster {args.numb} from {args.l}\n")
     for i in clusterDic:
         print (i)
         print ('\n'.join(clusterDic[i]))
         print ()
+        total += len(clusterDic[i])
+    print (f"Total Count: {total}")

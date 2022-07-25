@@ -5,11 +5,11 @@ from PIL import Image as im
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Restore file from image')
     parser.add_argument('-f', '--file', dest='file', type=str, required=True,
-            help='Image file to load to exe')
+            help='Image to restore back to file')
     parser.add_argument('-s', '--size', dest='size', type=int, required=True,
-            help='Original size of image')
-    parser.add_argument('-o', '--out', dest='out', type=str, default='out',
-            help='Output destination')
+            help='Original size of file')
+    parser.add_argument('-o', '--out', dest='out', type=str, default='restored',
+            help='Output name')
 
     args = parser.parse_args()
 

@@ -3,11 +3,11 @@ import pickle
 import argparse
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Create matrix of similar things')
+    parser = argparse.ArgumentParser(description='Show which clusters file is in')
     parser.add_argument("-l", "--lists", dest="l", type=str, nargs='+', required=True,
-            help='directory to scan from')
+            help='One or more pickled cluster list files')
     parser.add_argument("-s", "--hash", dest="hash", type=str, required=True,
-            help='hash to search in the lists')
+            help='File hash to search for')
 
     args = parser.parse_args()
 
@@ -22,6 +22,3 @@ if __name__ == "__main__":
                     print (f"Contains {len(j)} other entries")
                     print ()
                     lists.append(set(j))
-
-
-                    # print (j)

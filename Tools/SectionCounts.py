@@ -4,7 +4,7 @@ import json
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='List all sections and counts')
     parser.add_argument("-f", "--file", dest="file", type=str, required=True,
-            help='Detail file')
+            help='Detail file generated from SectionedImage.py')
 
     args = parser.parse_args()
 

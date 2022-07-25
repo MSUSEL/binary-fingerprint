@@ -3,14 +3,14 @@ import pickle
 import argparse
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Create matrix of similar things')
+    parser = argparse.ArgumentParser(description='Compare two pickled cluster lists')
     parser.add_argument("-l", "--lists", dest="l", type=str, nargs='+', required=True,
             help='directory to scan from')
 
     args = parser.parse_args()
 
-    if len(args.l) < 2:
-        print ("Required at least 2 lists")
+    if len(args.l) != 2:
+        print ("Error: Enter exactly two lists")
         sys.exit(1)
 
     with open(args.l[0], "rb") as f:
@@ -35,8 +35,8 @@ if __name__ == "__main__":
                 count += 1
                 matches.append(inter)
 
-    print (f"Found {count2} exact matches")
-    print ()
+    print (f"Found {count2}/{len(l1)} exact matches")
     print (f"Matched {count}/{len(l1)} clusters")
+    print ()
+    print (f"Found {count2}/{len(l2)} exact matches")
     print (f"Matched {count}/{len(l2)} clusters")
-    # print (matches)
