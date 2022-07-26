@@ -67,9 +67,6 @@ def InsertDB (data):
     except:
         print (f"{data[0]} Failed")
 
-def Main ():
+if __name__ == "__main__":
     x = input ("Enter JSON file to parse: ")
     ParseFile (x)
-
-if __name__ == "__main__":
-    Main ()

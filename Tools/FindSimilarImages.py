@@ -22,26 +22,21 @@ def calcdiff(im1, im2):
 
 def findImages (cmpimg, root, threshold, dic):
     im1 = Image.open(cmpimg)
-    dirs = [root]
-    count = 0
-    total = 0
-    while len(dirs) > 0:
-        for file in os.listdir(dirs[0]):
-            if os.path.isfile(dirs[0]+'/'+file):
-                dif = calcdiff (im1, dirs[0]+'/'+file)
-                if dif < threshold:
-                    classif = dic.get(file.split('.')[0], 'NA')
-                    if classif == 'NA':
-                        classif = dic.get(dirs[0].split('/')[-1], 'NA')
-                    if classif == 'NA':
-                        classif = dic.get(dirs[0].split('/')[-2], 'NA')
+    count, total = 0, 0
 
-                    print(f"{dirs[0]}/{file} - {classif}")
-                    count += 1
-            else:
-                dirs.append(dirs[0]+'/'+file)
+    for directory, sublist, filelist in os.walk(root):
+        for file in filelist:
+            dif = calcdiff (im1, os.path.join(directory, file))
+            if dif < threshold:
+                classif = dic.get(file.split('.')[0], 'NA')
+                if classif == 'NA':
+                    classif = dic.get(directory.split('/')[-1], 'NA')
+                if classif == 'NA':
+                    classif = dic.get(directory.split('/')[-2], 'NA')
+
+                print(f"{os.path.join(directory, file)} - {classif}")
+                count += 1
             total += 1
-        del dirs[0]
 
     print (f"Found {count}/{total} matching images")
 
