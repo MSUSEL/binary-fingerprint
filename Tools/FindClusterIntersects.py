@@ -5,7 +5,7 @@ import argparse
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Compare two pickled cluster lists')
     parser.add_argument("-l", "--lists", dest="l", type=str, nargs='+', required=True,
-            help='directory to scan from')
+            help='Pickled lists to compare')
 
     args = parser.parse_args()
 
