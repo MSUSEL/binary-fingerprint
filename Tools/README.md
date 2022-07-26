@@ -56,7 +56,7 @@ Usage: ListAssociatedCluster.py -l list1.pkl list2.pkl -s 123...
   -> Returns cluster number that 123... appears in from both list1 and list2  
 
 ### RenderGraph.py
-Purpose: Renders the pickled networkx graph saved by -.   
+Purpose: Renders the pickled networkx graph saved during clustering.   
 
 Usage: RenderGraph.py -f graph.pkl  
   -> Renders graph using MatPlotLib  
