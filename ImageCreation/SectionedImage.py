@@ -1,10 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-"""
-This is a program to create black and white images from PE files
-"""
-
 import time
 import os
 import subprocess
@@ -143,8 +136,6 @@ def generateReport (out):
     print ("\nGenerating Report:")
 
     # Variables
-    res = os.path.join(out,"res.txt")
-    det = os.path.join(out,"details.txt"))
     total, success = 0, 0
     packers, icons = 0, 0
     sections = {}
@@ -156,7 +147,7 @@ def generateReport (out):
               "NoneType cant save" : 0, "Data cant be fetched" : 0, "Index out of range" : 0, "Others" : 0}
 
     # Open the results file and count errors and successes
-    with open(res, "r", encoding='utf-8') as f:
+    with open(os.path.join(out, "res.txt"), "r", encoding='utf-8') as f:
         while item := f.readline():
             if "Processing" in item:
                 total += 1
@@ -177,7 +168,7 @@ def generateReport (out):
                 errDic["DOS Header Magic"] += 1 if "DOS Header magic not found" in item else 0
 
     # Open the details sections to number of sections
-    with open(det, "r", encoding='utf-8') as f:
+    with open(os.path.join(out,"details.txt"), "r", encoding='utf-8') as f:
         while item := f.readline():
             jsonObj = json.loads(item)
             x = len(jsonObj["sections"])
