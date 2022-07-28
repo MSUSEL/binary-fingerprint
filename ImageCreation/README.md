@@ -111,3 +111,38 @@ Not Packed: 5744
 ```
 
 ## ClusterImages.py
+This program is writen to cluster the images created by SectionedImage.py.  
+Requirements:  
+1. Python3.8 or newer
+2. Python libraries: numpy, networkx, and pillow
+
+This script is used to create images from files. There are various modes that the script can be run in:   
+1. Cluster on icons  
+Usage - python3 ClusterImages.py -d dir -c hashes.txt  
+2. Cluster on a specified section  
+Usage - python3 ClusterImages.py -d dir -c hashes.txt -n text.png  
+3. Rebuild/resave clusters from pickled icon list  
+Usage - python3 ClusterImages.py -d dir -c hashes.txt -li icolist.pkl  
+4. Rebuild/resave clusters from pickled section list  
+Usage - python3 ClusterImages.py -d dir -c hashes.txt -ls textlit.pkl -n text.png  
+
+Options:  
+(Required) -c: A classification file that contains MD5 SHA256 Packers Classification separated by tab  
+(Required) -d: The directory created by SectionedImage.py  
+-o: The directory to save the clusters to. The default is ./clusters  
+-t: The threshold to say that images are similar. The default is 2  
+
+The output of the script is a directory that contains:  
+1. A folder of for each cluster that has all the related images labeled by file name
+2. A list of clusters, their members and counts. Example:  
+```
+Cluster 596: 
+trojan_farfli/graftor - 1
+trojan_farfli/rootkit - 1
+trojan_rootkit/farfli - 1
+
+Cluster 597: 
+trojan_farfli/rootkit - 3
+```
+3. A list.pkl file that is all the clusters in list form saved with pickle
+4. A graph.pkl file that is the networkx graph saved with pickle
