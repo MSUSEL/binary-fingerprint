@@ -9,7 +9,7 @@ Because of the various forms of malware, as well as the sophisticated techniques
 To create the image, a python script is used to view a file byte-by-byte. Each of these bytes correspond to a grayscale pixel value, and are stored into an array of width 512 pixels. The width was chosen arbitrarily, as the width of 512 appeared visually fine for most files. Three things are accomplished during this image creation process:
 1. The entire full file is saved as an image
 2. Each individual binary segment is saved as an image
-3. If the file contains icons, there are extracted and saved. This feature was copied from https://github.com/robomotic/pemeta
+3. If the file contains icons, there are extracted and saved.
 
 The image below shows the images created from Trojan.Startpage/chifrx1.
 ![Sectioned Image](../Pictures/ExampleSeparation.png)
@@ -36,5 +36,78 @@ These results are interesting as it shows that it is possible to compare malware
 
 
 ## SectionedImage.py
+This program is writen to create images from exe files. The program will keep executing but throw an error is the program is not a valid Windows PE Executable file.  
+Requirements:  
+1. Python3.8 or newer
+2. Python libraries: imagehash, pefile, and pillow
+3. (Optional) pev pepack - used to check for packer information
+4. extracticon.py - used to extract icons. Slightly modified version taken from from https://github.com/robomotic/pemeta
+
+This script is used to create images from files. There are three modes that the script can be run in:
+1. Specify a singe file to parse:  
+Usage - python3 SectionedImage.py -f file.exe  
+2. Specify a directory to recursively scan:  
+Usage - python3 SectionedImage.py -d ~/exedirectory  
+3. Specify a path to a list containing file paths  
+Usage - python3 SectionedImage.py -l filelist.txt
+
+Other options that can be used wihin the program are:  
+-o: Specify the out directory to save everything in. The default is ./imgs  
+-w: Specify the width to save the images as. The default is 512  
+-mi: Specify the minimum height that the image needs to be inorder to be saved. This removes sections that are too small. The default is 3  
+-ma: Specify the maximum number of files to process. This is used if you want a specified count, say 1000, from a large folder. By default there is no maximum    
+
+The output of this program is a directory containing:
+1. A folder for each processed sample. Each folder has full.png, all sections saved as pngs, and an icos folder that has extracted icos saved as b0, b1, ...
+2. A file called details.txt that stores details about all successful creations as json objects. Each image is stored with an array that is [size, averagehash, wavehash, perceptual hash, difference hash]. Example:  
+```
+{  
+  "name": "test.exe",  
+  "packer": "no packer found", 
+  "sections": {  
+    "text": [176128, "0000ffffdfffffcc", "0000ffffc7ff0d00", "9010593d759e76ba", "9cd8ad8c9e485518"],  
+    "rsrc": [11776, "010000000fffff80", "c3880010bfffffc0",      "bf0ff3a2238448ab", "5f5232266bb02b0b"]  
+  },  
+  "full": [211951, "0000ffffffff0033", "00007fffecbd0077", "947925792578867b", "9cd8ac8e185514c6"],  
+  "ico": [2204, "7e12040a160e7e3c", "7e1a360a166e7e38", "95a5cab0cdc35b86", "d8b66cd2a4dad471"]  
+}  
+```
+3. A file called res.txt that stores the command line output that is being ran. Example:  
+```
+Processing /home/malware/test.exe   
+Done  
+
+Processing /home/malware/test2.exe  
+'Data length less than expected header length.'  
+```
+4. A file called report.txt that stores information about errors, successes, icons, packers, etc. Example:
+```
+Errors:  
+    162 - Header Length Issue  
+     97 - Invalid start byte  
+     80 - Unknown File Extension
+     45 - Invalid NT Header
+     36 - Invalid e_lfanew
+     27 - Embedded null byte
+     21 - NoneType cant save
+      
+Total In: 7900
+Total Success: 6645
+Total Errors: 1255
+
+Section Counts:
+    261 - 0 Sections
+   4552 - 1 Sections
+   1379 - 2 Sections
+    225 - 3 Sections
+    138 - 4 Sections
+     59 - 5 Sections
+
+With Icons: 1443
+Without Icons: 6457
+
+Packed: 2156
+Not Packed: 5744
+```
 
 ## ClusterImages.py
