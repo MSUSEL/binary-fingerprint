@@ -25,6 +25,14 @@ The following list is of all sections and counts that were found within the samp
 ## Text Section Results
 Important Files: 
 1. HashesAndClassif.txt - text file containing MD5 SHA256 Packing Classification from VirusTotal. Of the 7900 entries, only 6645 were properly formated and scanned.  
+2. details.txt - text file containing details about the successful creation of images for this sample.  
+3. res.txt - text file containing the command line output from the image creation program.  
+4. report.txt - text file containing more detailed results from the image creation program.
+
+Each folder contains three files:  
+1. list.pkl - the cluster lists stored with pickle
+2. graph.pkl - the clusters as a graph stored with pickle
+3. output.txt - the output of all clusters and their labels
 
 The 4997 samples that had a text section formed 608 clusters of at least 2 elements. While most clusters were the same family or same malware classifications, there were a handful of clusters showing unique characteristics. Below are 3 such clusters. Within these clusters, the .text sections are identical or near identical, meaning that the code used in the program matches between all of them. This demonstrates that there is similarity between these programs. However, when viewing the VirusTotal classifications for these samples, it was found that they are very different, sometimes not even in the same family. Further, the samples in cluster 259 are near identical in the entirety, with various small difference, and yet the classifications from VirusTotal are vastly different. The reasoning for this is unknown and requires further study into how malware is classified and the relationship between these files. 
 
